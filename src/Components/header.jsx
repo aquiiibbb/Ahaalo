@@ -15,6 +15,7 @@ function Header() {
   // Prevent background scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -36,33 +37,51 @@ function Header() {
       {/* Navigation Links */}
       <nav className={`nav-menu ${menuOpen ? "open" : ""}`}>
         <div className="nav-item">
-          <Link to="/" className="nav-link">HOME</Link>
+          <Link to="/" className="nav-link">
+            HOME
+          </Link>
         </div>
 
         <div className="nav-item">
-          <Link to="/services" className="nav-link">SERVICES</Link>
+          <Link to="/services" className="nav-link">
+            SERVICES
+          </Link>
         </div>
 
         <div className="nav-item">
-          <Link to="/support" className="nav-link">HELP & SUPPORT</Link>
+          <Link to="/support" className="nav-link">
+            HELP & SUPPORT
+          </Link>
         </div>
 
         <div className="nav-item">
-          <Link to="/contact" className="nav-link">CONTACT</Link>
+          <Link to="/contact" className="nav-link">
+            CONTACT
+          </Link>
         </div>
 
-        {/* Login button repeated inside the mobile drawer */}
+        {/* Login button inside mobile drawer */}
         <div className="nav-item mobile-only-login">
-          <a href="https://ahaalopms-com.vercel.app/login" className="login-btn">Log In</a>
+          <a
+            href="https://ahaalopms-com.vercel.app/"
+            className="login-btn"
+          >
+            Log In
+          </a>
         </div>
       </nav>
 
-      {/* Action Button (desktop) */}
+      {/* Action Button - Desktop */}
       <div className="header-actions">
-        <a href="https://ahaalopms-com.vercel.app/login" className="login-btn">Log In</a>
+        <a
+          href="https://ahaalopms-com.vercel.app/"
+          className="login-btn"
+        >
+          Log In
+        </a>
       </div>
 
-      {/* Hamburger Toggle (mobile) */}
+      {/* Hamburger Toggle - Mobile */}
       <button
         className={`menu-toggle ${menuOpen ? "active" : ""}`}
         onClick={() => setMenuOpen((prev) => !prev)}
@@ -76,7 +95,10 @@ function Header() {
 
       {/* Overlay for mobile menu */}
       {menuOpen && (
-        <div className="nav-overlay" onClick={() => setMenuOpen(false)}></div>
+        <div
+          className="nav-overlay"
+          onClick={() => setMenuOpen(false)}
+        ></div>
       )}
     </header>
   );
