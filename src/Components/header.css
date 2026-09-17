@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Header Container */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+  padding: 0 40px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(10, 37, 64, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 62px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Nav Link */
+.nav-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0a2540;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #c9972c;
+}
+
+/* Log In Button */
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.login-btn {
+  text-decoration: none;
+  background-color: #0a2540;
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 9px 24px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #c9972c;
+  color: #0a2540;
+  transform: translateY(-1px);
+}
+
+/* Hamburger Toggle (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1200;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background-color: #0a2540;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease, background-color 0.25s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+  background-color: #c9972c;
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+  background-color: #c9972c;
+}
+
+.nav-overlay {
+  display: none;
+}
+
+.mobile-only-login {
+  display: none;
+}
+
+/* ============================
+   Responsive Handling
+   ============================ */
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 20px;
+  }
+  .nav-menu {
+    gap: 16px;
+  }
+  .nav-link {
+    font-size: 13px;
+  }
+  .navbar-logo {
+    height: 54px;
+  }
+}
+
+@media (max-width: 860px) {
+  .navbar-container {
+    height: 72px;
+  }
+
+  .navbar-logo {
+    height: 48px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    top: 72px;
+    background: rgba(10, 37, 64, 0.45);
+    z-index: 1050;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 72px;
+    right: -100%;
+    height: calc(100vh - 72px);
+    width: min(78vw, 320px);
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 20px 0;
+    box-shadow: -6px 0 24px rgba(10, 37, 64, 0.15);
+    transition: right 0.3s ease;
+    z-index: 1100;
+    overflow-y: auto;
+  }
+
+  .nav-menu.open {
+    right: 0;
+  }
+
+  .nav-menu .nav-item {
+    width: 100%;
+    padding: 0 28px;
+  }
+
+  .nav-menu .nav-link {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #eef1f5;
+  }
+
+  .mobile-only-login {
+    display: flex;
+    margin-top: 18px;
+  }
+
+  .mobile-only-login .login-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-container {
+    padding: 0 16px;
+  }
+  .navbar-logo {
+    height: 42px;
+  }
+}
