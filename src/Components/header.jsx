@@ -53,7 +53,7 @@ function Header() {
 
         {/* Login button repeated inside the mobile drawer */}
         <div className="nav-item mobile-only-login">
-          <a href="#login" className="login-btn">Log In</a>
+          <a href="https://ahaalopms-com.vercel.app/login" className="login-btn">Log In</a>
         </div>
       </nav>
 
