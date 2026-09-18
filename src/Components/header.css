@@ -9,15 +9,18 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/* Header Container */
+/* ====================================================
+   DESKTOP NAVBAR
+   ==================================================== */
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 84px;
+  height: 80px;
   padding: 0 40px;
   background-color: #ffffff;
-  box-shadow: 0 1px 4px rgba(10, 37, 64, 0.08);
+  border-bottom: 1px solid #f1f5f9;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -30,18 +33,18 @@ body {
 }
 
 .logo-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
 .navbar-logo {
-  height: 62px;
+  height: 56px;
   width: auto;
   object-fit: contain;
   display: block;
 }
 
-/* Navigation Menu */
+/* Nav Menu */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -54,25 +57,25 @@ body {
   align-items: center;
 }
 
-/* Nav Link */
 .nav-link {
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  color: #0a2540;
-  letter-spacing: 0.5px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #334155;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: color 0.2s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
-.nav-link:hover {
-  color: #c9972c;
+.nav-link:hover,
+.nav-link.active {
+  color: #0f172a;
+  background-color: #f1f5f9;
 }
 
-/* Log In Button */
+/* Login CTA Button */
 .header-actions {
   display: flex;
   align-items: center;
@@ -80,49 +83,60 @@ body {
 
 .login-btn {
   text-decoration: none;
-  background-color: #0a2540;
+  background-color: #0f172a;
   color: #ffffff;
-  font-size: 14.5px;
-  font-weight: 600;
-  padding: 9px 24px;
-  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 8px;
   display: inline-block;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
 }
 
 .login-btn:hover {
-  background-color: #c9972c;
-  color: #0a2540;
+  background-color: #1e293b;
   transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
 }
 
-/* Hamburger Toggle (hidden on desktop) */
+/* Hamburger Toggle */
 .menu-toggle {
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5px;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: none;
+  width: 42px;
+  height: 42px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
   cursor: pointer;
   z-index: 1200;
+  transition: all 0.2s ease;
 }
 
 .menu-toggle span {
   display: block;
-  width: 24px;
-  height: 2.5px;
-  background-color: #0a2540;
+  width: 20px;
+  height: 2px;
+  background-color: #0f172a;
   border-radius: 2px;
   transition: transform 0.25s ease, opacity 0.25s ease, background-color 0.25s ease;
 }
 
+.menu-toggle.active {
+  background-color: #0f172a;
+  border-color: #0f172a;
+}
+
+.menu-toggle.active span {
+  background-color: #ffffff;
+}
+
 .menu-toggle.active span:nth-child(1) {
-  transform: translateY(7.5px) rotate(45deg);
-  background-color: #c9972c;
+  transform: translateY(7px) rotate(45deg);
 }
 
 .menu-toggle.active span:nth-child(2) {
@@ -130,8 +144,7 @@ body {
 }
 
 .menu-toggle.active span:nth-child(3) {
-  transform: translateY(-7.5px) rotate(-45deg);
-  background-color: #c9972c;
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .nav-overlay {
@@ -142,31 +155,33 @@ body {
   display: none;
 }
 
-/* ============================
-   Responsive Handling
-   ============================ */
+/* ====================================================
+   TABLET & LAPTOP
+   ==================================================== */
 @media (max-width: 1024px) {
   .navbar-container {
-    padding: 0 20px;
+    padding: 0 24px;
   }
   .nav-menu {
-    gap: 16px;
+    gap: 14px;
   }
   .nav-link {
-    font-size: 13px;
-  }
-  .navbar-logo {
-    height: 54px;
+    font-size: 12.5px;
+    padding: 6px 8px;
   }
 }
 
+/* ====================================================
+   COMPACT FLOATING MOBILE MENU
+   ==================================================== */
 @media (max-width: 860px) {
   .navbar-container {
-    height: 72px;
+    height: 70px;
+    padding: 0 18px;
   }
 
   .navbar-logo {
-    height: 48px;
+    height: 46px;
   }
 
   .menu-toggle {
@@ -177,64 +192,90 @@ body {
     display: none;
   }
 
+  /* Soft frosted overlay */
   .nav-overlay {
     display: block;
     position: fixed;
     inset: 0;
-    top: 72px;
-    background: rgba(10, 37, 64, 0.45);
+    top: 70px;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(4px);
     z-index: 1050;
+    animation: fadeIn 0.2s ease forwards;
   }
 
+  /* Modern floating popup card instead of full-height vertical strip */
   .nav-menu {
     position: fixed;
-    top: 72px;
-    right: -100%;
-    height: calc(100vh - 72px);
-    width: min(78vw, 320px);
-    background-color: #ffffff;
+    top: 78px;
+    right: 16px;
+    left: 16px;
+    width: auto;
+    height: auto;
+    max-height: calc(100vh - 100px);
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.18);
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    padding: 20px 0;
-    box-shadow: -6px 0 24px rgba(10, 37, 64, 0.15);
-    transition: right 0.3s ease;
+    align-items: stretch;
+    gap: 4px;
+    padding: 12px;
     z-index: 1100;
-    overflow-y: auto;
+    opacity: 0;
+    transform: translateY(-12px);
+    pointer-events: none;
+    transition: opacity 0.22s ease, transform 0.22s ease;
   }
 
   .nav-menu.open {
-    right: 0;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .nav-menu .nav-item {
     width: 100%;
-    padding: 0 28px;
+    padding: 0;
   }
 
   .nav-menu .nav-link {
     width: 100%;
-    padding: 14px 0;
-    font-size: 14px;
-    border-bottom: 1px solid #eef1f5;
+    padding: 12px 16px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #334155;
+    border-radius: 8px;
+    border-bottom: none;
+    transition: all 0.15s ease;
+  }
+
+  .nav-menu .nav-link:hover,
+  .nav-menu .nav-link.active {
+    background-color: #f1f5f9;
+    color: #0f172a;
   }
 
   .mobile-only-login {
     display: flex;
-    margin-top: 18px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #e2e8f0;
   }
 
   .mobile-only-login .login-btn {
     width: 100%;
     text-align: center;
+    padding: 12px;
+    font-size: 14px;
   }
 }
 
-@media (max-width: 420px) {
-  .navbar-container {
-    padding: 0 16px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  .navbar-logo {
-    height: 42px;
+  to {
+    opacity: 1;
   }
 }

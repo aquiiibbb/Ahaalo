@@ -51,6 +51,7 @@
   padding: 6px 18px;
   border-radius: 20px;
   margin-bottom: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 .header-content h1 {
@@ -109,14 +110,15 @@
   text-align: center;
   text-decoration: none;
   color: inherit;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
+  box-shadow: 0 8px 20px -4px rgba(15, 23, 42, 0.06), 0 3px 8px -2px rgba(15, 23, 42, 0.03);
 }
 
 .channel-card:hover {
   border-color: #c9972c;
-  box-shadow: 0 12px 30px rgba(201, 151, 44, 0.15);
+  box-shadow: 0 18px 36px -6px rgba(201, 151, 44, 0.2), 0 8px 16px -4px rgba(15, 23, 42, 0.06);
   transform: translateY(-6px);
 }
 
@@ -160,6 +162,7 @@
 .resources-section {
   padding: 80px 20px;
   background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
 }
 
 .resources-container {
@@ -195,6 +198,14 @@
   padding: 28px;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.05), 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+}
+
+.resource-category:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 14px 28px -4px rgba(15, 23, 42, 0.08);
+  transform: translateY(-3px);
 }
 
 .resource-category h3 {
@@ -237,6 +248,7 @@
 .video-section {
   padding: 80px 20px;
   background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
 }
 
 .video-container {
@@ -274,12 +286,13 @@
   color: inherit;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 8px 22px -4px rgba(15, 23, 42, 0.06), 0 3px 8px rgba(0, 0, 0, 0.03);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .video-card:hover {
   border-color: #c9972c;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 36px -6px rgba(15, 23, 42, 0.12), 0 6px 14px -2px rgba(201, 151, 44, 0.15);
   transform: translateY(-5px);
 }
 
@@ -297,22 +310,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 44px;
-  height: 44px;
-  background: rgba(255, 255, 255, 0.92);
+  width: 46px;
+  height: 46px;
+  background: rgba(255, 255, 255, 0.95);
   color: #c9972c;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  font-size: 16px;
   padding-left: 3px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .video-card:hover .play-icon {
-  transform: translate(-50%, -50%) scale(1.15);
+  transform: translate(-50%, -50%) scale(1.12);
   background: #ffffff;
 }
 
@@ -320,17 +333,18 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(15, 23, 42, 0.88);
   color: #ffffff;
   font-size: 11px;
   font-weight: 700;
   padding: 3px 8px;
   border-radius: 4px;
   letter-spacing: 0.5px;
+  backdrop-filter: blur(4px);
 }
 
 .video-details {
-  padding: 16px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -361,6 +375,7 @@
 .support-faq-section {
   padding: 80px 20px;
   background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
 }
 
 .faq-container {
@@ -384,9 +399,16 @@
 
 .faq-item {
   background: #ffffff;
-  padding: 28px;
+  padding: 30px;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.05), 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 14px 30px -4px rgba(15, 23, 42, 0.08);
 }
 
 .faq-item h4 {
@@ -404,10 +426,11 @@
 
 /* ====== CTA SECTION ====== */
 .support-cta-section {
-  padding: 80px 20px;
+  padding: 85px 20px;
   background: linear-gradient(135deg, #092c3e 0%, #0f172a 100%);
   text-align: center;
   color: #ffffff;
+  box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .cta-content {
@@ -447,13 +470,15 @@
   font-size: 15px;
   font-weight: 800;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 22px -4px rgba(201, 151, 44, 0.4);
 }
 
 .btn-primary:hover {
   background-color: #a6791f;
   transform: translateY(-2px);
   color: #ffffff;
+  box-shadow: 0 12px 28px -4px rgba(201, 151, 44, 0.5);
 }
 
 .btn-secondary {
@@ -469,12 +494,15 @@
   font-size: 15px;
   font-weight: 800;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
 .btn-secondary:hover {
   background-color: #ffffff;
   color: #092c3e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(255, 255, 255, 0.2);
 }
 
 /* ====== RESPONSIVE ====== */
@@ -484,6 +512,7 @@
   .video-grid,
   .faq-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .header-content h1 {
@@ -492,19 +521,59 @@
 }
 
 @media (max-width: 768px) {
+  .support-header-banner {
+    padding: 60px 16px;
+    min-height: 320px;
+    text-align: center;
+  }
+
+  .support-channels-section,
+  .resources-section,
+  .video-section,
+  .support-faq-section,
+  .support-cta-section {
+    padding: 55px 16px;
+  }
+
+  .channels-intro h2,
+  .resources-intro h2,
+  .video-section h2,
+  .faq-container h2,
+  .support-cta-section h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .channels-intro p,
+  .resources-intro p,
+  .video-subtitle,
+  .support-cta-section p {
+    font-size: 14.5px;
+    text-align: center;
+  }
+
   .channels-grid,
   .resources-grid,
   .video-grid,
   .faq-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .channel-card,
+  .resource-category,
+  .faq-item {
+    padding: 24px 20px;
   }
 
   .cta-actions {
     flex-direction: column;
+    align-items: center;
   }
 
   .btn-primary,
   .btn-secondary {
     width: 100%;
+    max-width: 320px;
   }
 }

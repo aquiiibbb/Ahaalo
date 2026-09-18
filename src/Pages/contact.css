@@ -59,8 +59,9 @@
   font-weight: 800;
   letter-spacing: 2px;
   padding: 6px 18px;
-  border-radius: 0px; /* Zero Radius */
+  border-radius: 15px;
   margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .header-content h1 {
@@ -95,12 +96,12 @@
   align-items: start;
 }
 
-/* Form Card (Zero Radius) */
+/* Form Card */
 .contact-form-card {
   background: #ffffff;
   padding: 40px;
-  border-radius: 0px; /* Zero Radius */
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.14), 0 8px 18px -6px rgba(15, 23, 42, 0.08);
   border: 1px solid #cbd5e1;
 }
 
@@ -121,13 +122,14 @@
   border: 1.5px solid #a7f3d0;
   color: #065f46;
   padding: 14px 18px;
-  border-radius: 0px; /* Zero Radius */
+  border-radius: 8px;
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   gap: 10px;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.12);
 }
 
 .actual-form {
@@ -155,7 +157,7 @@
 .field-group textarea {
   width: 100%;
   padding: 12px 14px;
-  border-radius: 0px; /* Zero Radius */
+  border-radius: 4px;
   border: 1.5px solid #cbd5e1;
   font-size: 14.5px;
   background-color: #f8fafc;
@@ -164,6 +166,7 @@
   transition: all 0.2s ease;
   font-family: inherit;
   box-sizing: border-box;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
 }
 
 .field-group input:focus,
@@ -171,28 +174,31 @@
 .field-group textarea:focus {
   border-color: #c9972c;
   background-color: #ffffff;
-  box-shadow: none;
+  box-shadow: 0 0 0 3px rgba(201, 151, 44, 0.2), inset 0 1px 2px rgba(0, 0, 0, 0.02);
 }
 
 .contact-submit-btn {
-  background-color: #c9972c;
+  background-color: #1e293b;
   color: #ffffff;
   border: none;
   padding: 16px 26px;
-  border-radius: 0px; /* Zero Radius */
+  border-radius: 6px;
   font-size: 15.5px;
   font-weight: 800;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   margin-top: 10px;
+  box-shadow: 0 8px 20px -4px rgba(30, 41, 59, 0.35);
 }
 
 .contact-submit-btn:hover {
-  background-color: #a6791f;
+  background-color: #101928;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -4px rgba(30, 41, 59, 0.45);
 }
 
 /* ====================================================
-   3. INFO PANEL (Zero Radius)
+   3. INFO PANEL
    ==================================================== */
 .contact-info-panel {
   display: flex;
@@ -209,30 +215,33 @@
 .quick-card {
   background: #ffffff;
   border: 1px solid #cbd5e1;
-  border-radius: 0px; /* Zero Radius */
+  border-radius: 12px;
   padding: 22px;
   display: flex;
   gap: 18px;
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.2s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
 }
 
 .quick-card:hover {
   border-color: #c9972c;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 35px -6px rgba(15, 23, 42, 0.14), 0 8px 16px -4px rgba(201, 151, 44, 0.1);
 }
 
 .card-icon {
   width: 52px;
   height: 52px;
-  border-radius: 0px; /* Zero Radius */
+  border-radius: 10px;
   background: #f1f5f9;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 24px;
   flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
 }
 
 .card-text {
@@ -258,7 +267,8 @@
   background-color: #fdf6e6;
   color: #c9972c;
   padding: 3px 9px;
-  border-radius: 0px; /* Zero Radius */
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(201, 151, 44, 0.15);
 }
 
 .card-text p {
@@ -277,8 +287,8 @@
   background: #092c3e;
   color: #ffffff;
   padding: 28px;
-  border-radius: 0px; /* Zero Radius */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 18px 40px -8px rgba(9, 44, 62, 0.35), 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .value-props-box h3 {

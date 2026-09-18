@@ -94,7 +94,7 @@ function Contact() {
                     id="fullName"
                     name="fullName"
                     required
-                    placeholder="e.g. Rahul Sharma"
+                    placeholder=""
                     value={formState.fullName}
                     onChange={handleChange}
                   />
@@ -106,7 +106,7 @@ function Contact() {
                     id="phone"
                     name="phone"
                     required
-                    placeholder="+91 98765 43210"
+                    placeholder=""
                     value={formState.phone}
                     onChange={handleChange}
                   />
@@ -121,7 +121,7 @@ function Contact() {
                     id="email"
                     name="email"
                     required
-                    placeholder="manager@yourhotel.com"
+                    placeholder=""
                     value={formState.email}
                     onChange={handleChange}
                   />
@@ -133,7 +133,7 @@ function Contact() {
                     id="hotelName"
                     name="hotelName"
                     required
-                    placeholder="e.g. Sea View Resort"
+                    placeholder=""
                     value={formState.hotelName}
                     onChange={handleChange}
                   />
@@ -178,7 +178,7 @@ function Contact() {
                   id="message"
                   name="message"
                   rows="4"
-                  placeholder="Tell us about current software challenges or requirements..."
+                  placeholder=""
                   value={formState.message}
                   onChange={handleChange}
                 ></textarea>
@@ -214,15 +214,6 @@ function Contact() {
               ))}
             </div>
 
-            <div className="value-props-box">
-              <h3>Why Leading Hoteliers Switch</h3>
-              <ul>
-                <li>⚡ 24-48 Hours zero-downtime migration</li>
-                <li>🛡️ Secure OTP verification on financial settlements</li>
-                <li>🔄 Automated multi-channel rate & booking sync</li>
-                <li>📊 Dedicated customer success manager & live training</li>
-              </ul>
-            </div>
           </div>
         </div>
       </main>
