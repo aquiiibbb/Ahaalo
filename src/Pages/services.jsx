@@ -173,7 +173,6 @@ function Services() {
     <div className="bm-services-wrapper">
       {/* HEADER BANNER */}
       <header className="services-header-banner">
-        <div className="header-overlay"></div>
         <div className="header-content">
           <span className="services-badge">OUR SERVICES</span>
           <h1>

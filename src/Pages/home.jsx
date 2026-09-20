@@ -3,11 +3,10 @@ import "./home.css";
 
 function Home() {
   const heroImages = [
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1758193783649-13371d7fb8dd?auto=format&fit=crop&w=1200&q=80",
+    "https://hostsync.in/images/screenshots/financials.png",
+    "https://hostsync.in/images/screenshots/dashboard.png",
+    "https://hostsync.in/images/screenshots/calendar.png",
   ];
-
   const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
@@ -110,6 +109,7 @@ function Home() {
             </div>
           </div>
 
+          {/* Desktop par screenshots slider dikhega, mobile par hidden */}
           <div className="hl-hero-preview-col">
             <div className="hl-hero-carousel-container">
               <div className="hl-carousel-slide-wrapper">
