@@ -29,8 +29,8 @@ function Contact() {
       icon: "📞",
       title: "Sales & Demo Enquiries",
       desc: "Speak with our hotel software specialists for tailored setup.",
-      contact: "+91 92309 94738",
-      link: "tel:+919230994738",
+      contact: "+91 7225962759",
+      link: "tel:+917225962759",
       badge: "Mon-Sat: 9AM - 8PM",
     },
     {
@@ -46,7 +46,7 @@ function Contact() {
       title: "Quick WhatsApp Chat",
       desc: "Fast quotes, onboarding guidance, and instant support.",
       contact: "Chat on WhatsApp",
-      link: "https://wa.me/919230994738",
+      link: "https://wa.me/917225962759",
       badge: "Instant Response",
     },
   ];
@@ -152,7 +152,6 @@ function Contact() {
                     <option value="1-20">1 - 20 Rooms</option>
                     <option value="21-50">21 - 50 Rooms</option>
                     <option value="51-100">51 - 100 Rooms</option>
-                    <option value="100+">100+ Rooms (Enterprise)</option>
                   </select>
                 </div>
                 <div className="field-group">

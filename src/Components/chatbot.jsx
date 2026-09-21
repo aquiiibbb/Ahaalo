@@ -31,7 +31,7 @@ function Chatbot() {
       "Setup is quick! Most hotels go live within 24-48 hours. We handle zero-downtime migration from your existing system. Would you like to schedule a setup call?",
     ],
     integration: [
-      "We integrate with 50+ OTA platforms including Booking.com, Agoda, Airbnb, MakeMyTrip, and all major payment gateways like Razorpay, PayU, and PhonePe.",
+      "We integrate with 20+ OTA platforms including Booking.com, Agoda, Airbnb, MakeMyTrip, and all major payment gateways like Razorpay, PayU, and PhonePe.",
     ],
     demo: [
       "Absolutely! We can schedule a live walkthrough of Haalo tailored to your hotel's needs. When would be a good time for you?",
@@ -113,7 +113,7 @@ function Chatbot() {
         <div className="chatbot-container">
           <div className="chatbot-header">
             <div className="header-content">
-              <h3>Haalo AI</h3>
+              <h3>A Haalo AI</h3>
               <p>Always here to help</p>
             </div>
             <button

@@ -63,18 +63,6 @@ function Services() {
         "Smart Analytics",
       ],
     },
-    {
-      icon: "📱",
-      title: "Mobile Staff Application",
-      desc: "Give housekeeping and staff real-time access to room status, tasks, and guest information on mobile devices.",
-      features: [
-        "Room Status Updates",
-        "Task Management",
-        "Guest Info Access",
-        "Real-time Sync",
-        "Offline Mode",
-      ],
-    },
   ];
 
   const integrationLogos = [
@@ -240,7 +228,7 @@ function Services() {
       <section className="services-cta-section">
         <div className="cta-content">
           <h2>Ready to Transform Your Hotel Operations?</h2>
-          <p>Join 450+ hotels already using Haalo to streamline operations and increase revenue</p>
+          <p>Join 10+ hotels already using Haalo to streamline operations and increase revenue</p>
           <div className="cta-buttons">
             <button className="btn-primary">Request a Demo</button>
             <button className="btn-secondary">Schedule Call</button>

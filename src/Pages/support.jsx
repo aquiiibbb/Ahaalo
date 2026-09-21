@@ -7,8 +7,8 @@ function Support() {
       icon: "📞",
       title: "Phone Support",
       desc: "Speak directly with our hotel experts",
-      contact: "+91 92309 94738",
-      link: "tel:+919230994738",
+      contact: "+91 7225962759",
+      link: "tel:+917225962759",
       hours: "Mon-Sat: 9AM - 8PM",
     },
     {
@@ -24,7 +24,7 @@ function Support() {
       title: "WhatsApp Chat",
       desc: "Quick responses and instant support",
       contact: "Chat on WhatsApp",
-      link: "https://wa.me/919230994738",
+      link: "https://wa.me/917225962759",
       hours: "Instant Response",
     },
     {
@@ -195,7 +195,7 @@ function Support() {
           <div className="faq-grid">
             <div className="faq-item">
               <h4>How do I report a technical issue?</h4>
-              <p>Email us at info@haalo.in or call our support team. We typically respond within 2-4 hours for urgent issues.</p>
+              <p>Email us at info@ahaalo.in or call our support team. We typically respond within 2-4 hours for urgent issues.</p>
             </div>
             <div className="faq-item">
               <h4>Is training provided for my staff?</h4>
@@ -220,14 +220,14 @@ function Support() {
           <p>Our experts are ready to help. Connect with us now.</p>
           <div className="cta-actions">
             <a
-              href="https://wa.me/919230994738"
+              href="https://wa.me/917225962759"
               target="_blank"
               rel="noreferrer"
               className="btn-primary"
             >
               Start Chat Now
             </a>
-            <a href="tel:+919230994738" className="btn-secondary">
+            <a href="tel:+917225962759" className="btn-secondary">
               Schedule a Call
             </a>
           </div>

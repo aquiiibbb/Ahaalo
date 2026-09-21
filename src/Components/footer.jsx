@@ -76,7 +76,7 @@ function Footer() {
             </li>
             <li>
               <span className="info-icon">📞</span>
-              <a href="tel:+911234567890">+91 12345 67890</a>
+              <a href="tel:+917225962759">+91 7225962759</a>
             </li>
             <li>
               <span className="info-icon">✉️</span>
@@ -90,7 +90,7 @@ function Footer() {
       <div className="footer-bottom">
         <div className="footer-bottom-container">
           <p className="copyright">
-            &copy; {new Date().getFullYear()} Hāālo. All rights reserved.
+            &copy; {new Date().getFullYear()} A Hāālo. All rights reserved.
           </p>
           <div className="legal-links">
             <a href="#privacy">Privacy Policy</a>

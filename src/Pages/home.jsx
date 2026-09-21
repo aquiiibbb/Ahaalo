@@ -31,13 +31,13 @@ function Home() {
     },
     {
       name: "Madhu Mamata Hotel & Resorts",
-      rating: "5.0",
+      rating: "4.0",
       text: "An outstanding management platform. Streamlined our reservations and inventory management smoothly across all OTA platforms with zero double bookings.",
       role: "Resort Group",
     },
     {
       name: "Samudra Bilas Hotel",
-      rating: "5.0",
+      rating: "4.0",
       text: "Simplified our operations, optimized daily ADR, and helped organize staff shifts. Truly an indispensable investment for any hotelier.",
       role: "Beachfront Property",
     },
@@ -60,7 +60,7 @@ function Home() {
       {/* FLOATING ACTION ICONS */}
       <div className="hl-floating-bar">
         <a
-          href="https://wa.me/919230994738"
+          href="https://wa.me/917225962759"
           target="_blank"
           rel="noreferrer"
           className="hl-fab-item hl-fab-whatsapp"
@@ -70,7 +70,7 @@ function Home() {
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
           </svg>
         </a>
-        <a href="tel:+919230994738" className="hl-fab-item hl-fab-phone" aria-label="Call Sales">
+        <a href="tel:+917225962759" className="hl-fab-item hl-fab-phone" aria-label="Call Sales">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
             <path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.4-1.1-.6-2.3-.6-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z" />
           </svg>
@@ -223,27 +223,27 @@ function Home() {
       <section className="hl-metrics-banner">
         <h2 className="hl-metrics-title">
           Grow Your Business With <br />
-          <span className="hl-text-navy">Haalo</span>
+          <span className="hl-text-navy">A Hāālo</span>
         </h2>
         <div className="hl-metrics-grid">
           <div className="hl-metric-box">
             <div className="hl-m-icon">🖥️</div>
-            <div className="hl-m-val">1.05M+</div>
+            <div className="hl-m-val">1M+</div>
             <div className="hl-m-lbl">Monthly Bookings Processed</div>
           </div>
           <div className="hl-metric-box">
             <div className="hl-m-icon">🏨</div>
-            <div className="hl-m-val">1,000+</div>
+            <div className="hl-m-val">20+</div>
             <div className="hl-m-lbl">Rooms Managed</div>
           </div>
           <div className="hl-metric-box">
             <div className="hl-m-icon">💻</div>
-            <div className="hl-m-val">50+</div>
+            <div className="hl-m-val">10+</div>
             <div className="hl-m-lbl">Active Properties</div>
           </div>
           <div className="hl-metric-box">
             <div className="hl-m-icon">🚀</div>
-            <div className="hl-m-val hl-text-navy">66%</div>
+            <div className="hl-m-val hl-text-navy">61%</div>
             <div className="hl-m-lbl">Average Revenue Growth</div>
           </div>
         </div>
@@ -375,7 +375,7 @@ function Home() {
 
           <div className="hl-channel-right">
             <ul className="hl-bullet-list-tight">
-              <li>Instant 2-way sync across 50+ global OTAs</li>
+              <li>Instant 2-way sync across 10+ global OTAs</li>
               <li>Complete prevention of double bookings</li>
               <li>Centralized single-screen rate management</li>
               <li>Real-time inventory and cancellation updates</li>
@@ -466,7 +466,7 @@ function Home() {
           <span className="hl-reviews-sub-lbl">Verified Platform Reviews</span>
 
           <div className="hl-rating-pill-card">
-            <b>4.9 / 5.0 Rating Across 450+ Properties</b>
+            <b>4.4 / 5.0 Rating Across 10+ Properties</b>
             <div className="hl-star-rating">★★★★★</div>
           </div>
         </div>

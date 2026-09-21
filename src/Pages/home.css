@@ -224,7 +224,7 @@ button {
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.05fr 1fr;
   gap: 40px;
   align-items: center;
   position: relative;
@@ -300,7 +300,7 @@ button {
 }
 
 /* ====================================================
-   DESKTOP SCREENSHOT SLIDER (COMPACT SIZE)
+   DESKTOP SCREENSHOT SLIDER (MEDIUM BALANCED SIZE)
    ==================================================== */
 .hl-hero-preview-col {
   position: relative;
@@ -310,17 +310,17 @@ button {
 .hl-hero-carousel-container {
   position: relative;
   width: 100%;
-  max-width: 500px; /* Width ko thoda chota kiya */
+  max-width: 570px; /* Thoda sa bada kiya */
   margin: 0 auto;
 }
 
 .hl-carousel-slide-wrapper {
   position: relative;
-  width: 100%;
-  height: 380px; /* Height ko 460px se ghata kar 380px kiya */
-  border-radius: 14px;
+  width: 99%;
+  height: 390px; /* Height 380px se badha kar 420px ki gayi */
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 22px 55px -15px rgba(0, 0, 0, 0.6);
   border: 1.5px solid rgba(255, 255, 255, 0.2);
   background-color: #0b1728;
   display: flex;
@@ -336,7 +336,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 12px;
 }
 
 .hl-carousel-image-slide.active {
@@ -347,19 +347,19 @@ button {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .hl-slider-dots {
   display: flex;
   justify-content: center;
-  gap: 8px;
-  margin-top: 14px;
+  gap: 9px;
+  margin-top: 16px;
 }
 
 .hl-dot {
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.35);
   cursor: pointer;
@@ -368,7 +368,7 @@ button {
 
 .hl-dot.active {
   background: #f59e0b;
-  width: 22px;
+  width: 24px;
   border-radius: 6px;
 }
 
@@ -1192,7 +1192,7 @@ button {
   }
 
   .hl-carousel-slide-wrapper {
-    height: 320px;
+    height: 350px;
   }
 
   .hl-services-grid,
