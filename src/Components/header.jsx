@@ -67,7 +67,7 @@ function Header() {
         {/* Login button inside mobile menu */}
         <div className="nav-item mobile-only-login">
           <a
-            href="https://ahaalopms-com.vercel.app/"
+            href="https://pms.ahaalo.com"
             className="login-btn"
             target="_blank"
             rel="noopener noreferrer"
@@ -81,7 +81,7 @@ function Header() {
       {/* Action Button - Desktop */}
       <div className="header-actions">
         <a
-          href="https://ahaalopms-com.vercel.app/"
+          href="https://pms.ahaalo.com"
           className="login-btn"
           target="_blank"
           rel="noopener noreferrer"
