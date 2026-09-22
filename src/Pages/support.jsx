@@ -60,25 +60,21 @@ function Support() {
     {
       title: "Cloud PMS Dashboard & Room Grid Walkthrough",
       duration: "15 min",
-      url: "https://www.youtube.com/watch?v=3rO2jZq3_vM",
       thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     },
     {
       title: "Channel Manager & Multi-OTA Rate Mapping",
       duration: "12 min",
-      url: "https://www.youtube.com/watch?v=kJQP7kiw5Fk",
       thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
     },
     {
       title: "Direct Booking Engine & Payment Flow Setup",
       duration: "10 min",
-      url: "https://www.youtube.com/watch?v=L_LUpnjgPso",
       thumbnail: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
     },
     {
       title: "Front Desk & Housekeeping Mobile App Operations",
       duration: "20 min",
-      url: "https://www.youtube.com/watch?v=ZXsQAXx_ao0",
       thumbnail: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
     },
   ];
@@ -130,7 +126,7 @@ function Support() {
 
       {/* RESOURCES SECTION */}
       <section className="resources-section">
-        <div className="resources-container">
+        <div className="support-container">
           <div className="resources-intro">
             <h2>Learning Resources</h2>
             <p>Explore our comprehensive documentation and tutorials</p>
@@ -158,31 +154,37 @@ function Support() {
       {/* VIDEO TUTORIALS SECTION */}
       <section className="video-section">
         <div className="video-container">
-          <h2>Video Tutorials & Training</h2>
+          <h2>Video Tutorials &amp; Training</h2>
           <p className="video-subtitle">Learn at your own pace with our software walkthroughs</p>
+
           <div className="video-grid">
             {videoTutorials.map((video, idx) => (
-              <a
-                key={idx}
-                href={video.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="video-card"
-              >
+              <div key={idx} className="video-card">
                 <div
                   className="video-placeholder"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.65)), url(${video.thumbnail})`,
+                    backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.75)), url(${video.thumbnail})`,
                   }}
                 >
-                  <span className="play-icon">▶</span>
+                  {/* ATTRACTIVE GLASSMORPHIC BADGE */}
+                  <div className="video-coming-soon-tag">
+                    <span className="badge-pulse-dot"></span>
+                    COMING SOON
+                  </div>
+
+                  {/* GLOWING PLAY BUTTON */}
+                  <div className="play-icon-wrap">
+                    <span className="play-icon">▶</span>
+                  </div>
+
                   <span className="video-duration">{video.duration}</span>
                 </div>
+
                 <div className="video-details">
                   <h4>{video.title}</h4>
-                  <p className="watch-tutorial-btn">Watch Tutorial →</p>
+                  <span className="watch-tutorial-btn">Watch Tutorial →</span>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </div>

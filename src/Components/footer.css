@@ -3,7 +3,7 @@
 ========================================================= */
 
 .bm-footer {
-  background-color: #0a2540;
+  background-color: #192230;
   color: #a0aec0;
   font-family:
     -apple-system,
@@ -51,7 +51,7 @@
 .footer-logo-link {
   display: inline-flex;
 
-  background-color: #ffffff;
+ background-color: #192230;
 
   padding: 14px 20px;
 
@@ -191,7 +191,7 @@
 .social-icon.twitter:hover {
   background-color: #1da1f2;
 
-  color: #ffffff;
+  color: #eff1f4;
 
   transform: translateY(-4px);
 
@@ -215,7 +215,7 @@
 .social-icon.linkedin:hover {
   background-color: #0a66c2;
 
-  color: #ffffff;
+  color: #eff1f4;
 
   transform: translateY(-4px);
 
@@ -265,7 +265,7 @@
 ========================================================= */
 
 .social-icon:focus-visible {
-  outline: 2px solid #ffffff;
+  outline: 2px solid #eff1f4;
 
   outline-offset: 3px;
 }
@@ -276,7 +276,7 @@
 ========================================================= */
 
 .footer-heading {
-  color: #ffffff;
+  color:#eff1f4;
 
   font-size: 15px;
 

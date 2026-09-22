@@ -53,10 +53,10 @@ function Contact() {
 
   return (
     <div className="bm-contact-wrapper">
-      {/* TOP HEADER WITH BACKGROUND IMAGE */}
+      {/* 1. TOP HEADER BANNER */}
       <header className="bm-contact-header-banner">
         <div className="header-overlay"></div>
-        <div className="header-content">
+        <div className="header-content animate-fade-down">
           <span className="contact-badge">GET IN TOUCH</span>
           <h1>
             Scale Your Hotel’s Growth With <br />
@@ -69,14 +69,19 @@ function Contact() {
         </div>
       </header>
 
-      {/* BODY */}
+      {/* 2. OVERLAPPING BODY */}
       <main className="bm-contact-body">
         <div className="contact-grid-layout">
-          {/* LEFT: FORM CARD (NO RADIUS) */}
-          <div className="contact-form-card">
+          
+          {/* LEFT: MINIMAL FORM CARD (SLIDES UP ON LOAD) */}
+          <div className="contact-form-card animate-slide-up">
             <div className="form-head">
-              <h2>Request a Free Live Demo</h2>
-              <p>Fill in your hotel details and our team will prepare a custom walkthrough.</p>
+              <h2 className="minimal-heading">
+                Contact <span className="muted-us">Us</span>
+              </h2>
+              <p className="minimal-sub">
+                Leave your details and we will get back to you as soon as we can.
+              </p>
             </div>
 
             {submitted && (
@@ -86,63 +91,57 @@ function Contact() {
             )}
 
             <form onSubmit={handleSubmit} className="actual-form">
-              <div className="input-row-2">
-                <div className="field-group">
-                  <label htmlFor="fullName">Full Name *</label>
-                  <input
-                    type="text"
-                    id="fullName"
-                    name="fullName"
-                    required
-                    placeholder=""
-                    value={formState.fullName}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="field-group">
-                  <label htmlFor="phone">Phone / WhatsApp Number *</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    required
-                    placeholder=""
-                    value={formState.phone}
-                    onChange={handleChange}
-                  />
-                </div>
+              <div className="minimal-input-field">
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  required
+                  placeholder="Name"
+                  value={formState.fullName}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="minimal-input-field">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Email"
+                  value={formState.email}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="minimal-input-field">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="Phone"
+                  value={formState.phone}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="minimal-input-field">
+                <input
+                  type="text"
+                  id="hotelName"
+                  name="hotelName"
+                  required
+                  placeholder="Hotel / Property Name"
+                  value={formState.hotelName}
+                  onChange={handleChange}
+                />
               </div>
 
               <div className="input-row-2">
-                <div className="field-group">
-                  <label htmlFor="email">Work Email *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    placeholder=""
-                    value={formState.email}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="field-group">
-                  <label htmlFor="hotelName">Property / Hotel Name *</label>
-                  <input
-                    type="text"
-                    id="hotelName"
-                    name="hotelName"
-                    required
-                    placeholder=""
-                    value={formState.hotelName}
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-
-              <div className="input-row-2">
-                <div className="field-group">
-                  <label htmlFor="rooms">Total Rooms</label>
+                <div className="minimal-input-field">
+                  <span className="minimal-select-label">Total Rooms</span>
                   <select
                     id="rooms"
                     name="rooms"
@@ -152,10 +151,12 @@ function Contact() {
                     <option value="1-20">1 - 20 Rooms</option>
                     <option value="21-50">21 - 50 Rooms</option>
                     <option value="51-100">51 - 100 Rooms</option>
+                    <option value="100+">100+ Rooms</option>
                   </select>
                 </div>
-                <div className="field-group">
-                  <label htmlFor="serviceNeeded">Primary Requirement</label>
+
+                <div className="minimal-input-field">
+                  <span className="minimal-select-label">Primary Requirement</span>
                   <select
                     id="serviceNeeded"
                     name="serviceNeeded"
@@ -171,32 +172,33 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="field-group">
-                <label htmlFor="message">Key Requirements or Notes (Optional)</label>
+              <div className="minimal-input-field">
                 <textarea
                   id="message"
                   name="message"
-                  rows="4"
-                  placeholder=""
+                  rows="2"
+                  placeholder="How can we help?"
                   value={formState.message}
                   onChange={handleChange}
                 ></textarea>
               </div>
 
-              <button type="submit" className="contact-submit-btn">
-                Book Live Walkthrough →
-              </button>
+              <div className="submit-container">
+                <button type="submit" className="minimal-submit-btn">
+                  | SUBMIT |
+                </button>
+              </div>
             </form>
           </div>
 
-          {/* RIGHT: CONTACT CARDS & INFO */}
+          {/* RIGHT: CONTACT CARDS (STAGGERED SLIDE FROM RIGHT) */}
           <div className="contact-info-panel">
             <div className="cards-stack">
               {contactMethods.map((method, idx) => (
                 <a
                   href={method.link}
                   key={idx}
-                  className="quick-card"
+                  className={`quick-card animate-slide-right delay-${idx + 1}`}
                   target={method.link.startsWith("http") ? "_blank" : "_self"}
                   rel="noreferrer"
                 >
@@ -212,8 +214,8 @@ function Contact() {
                 </a>
               ))}
             </div>
-
           </div>
+
         </div>
       </main>
     </div>

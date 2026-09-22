@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@500;600&display=swap');
+
 /* ====================================================
-   HAALO UNIQUE STYLESHEET (hl-)
+   GLOBAL & WRAPPER
    ==================================================== */
 * {
   margin: 0;
@@ -7,59 +9,66 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: #1e293b;
-  background-color: #ffffff;
-  overflow-x: hidden;
-  font-size: 15px;
+  background-color: #eff1f4;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .hl-home-wrapper {
+  background-color: #ffffff;
   position: relative;
   width: 100%;
-  background: #ffffff;
 }
 
-/* Primary Navy Accent for headings across the site */
-.hl-text-navy {
-  color: #0f172a !important;
-  font-weight: 800;
+.hl-section-wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-/* Category Pill Tags */
 .hl-section-category {
   display: inline-block;
   font-size: 11.5px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #475569;
+  color: #1c2430;
   font-weight: 800;
   background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  padding: 4px 14px;
+  border: 1px solid #cbd5e1;
+  padding: 5px 15px;
   border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.hl-heading-center {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 45px auto;
+}
+
+.hl-heading-center h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1c2430;
+  line-height: 1.3;
   margin-bottom: 12px;
 }
 
-/* ====================================================
-   BUTTON STYLES
-   ==================================================== */
-button {
-  font-family: inherit;
-  outline: none;
+.hl-heading-center p {
+  font-size: 15.5px;
+  color: #64748b;
 }
 
-/* 1. Golden Action Button */
-.hl-btn-gold {
-  background-color: #c9972c;
+/* ====================================================
+   BUTTONS
+   ==================================================== */
+.hl-btn-navy {
+  background-color: #1c2430;
   color: #ffffff;
-  border: 1.5px solid #c9972c;
+  border: 1.5px solid #1c2430;
   font-size: 14.5px;
   font-weight: 700;
   padding: 12px 28px;
@@ -68,41 +77,21 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 14px rgba(201, 151, 44, 0.28);
+  box-shadow: 0 4px 14px rgba(28, 36, 48, 0.25);
 }
 
-.hl-btn-gold:hover {
-  background-color: #a6791f;
-  border-color: #a6791f;
+.hl-btn-navy:hover {
+  background-color: #0f172a;
+  border-color: #0f172a;
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(201, 151, 44, 0.38);
+  box-shadow: 0 8px 22px rgba(28, 36, 48, 0.35);
 }
 
-/* 2. Secondary Button */
 .hl-btn-secondary {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: #ffffff;
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
-  font-size: 14.5px;
-  font-weight: 600;
-  padding: 12px 28px;
-  border-radius: 8px;
-  cursor: pointer;
-  backdrop-filter: blur(6px);
-  transition: all 0.2s ease;
-}
-
-.hl-btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: #ffffff;
-  transform: translateY(-2px);
-}
-
-/* 3. Dark Grey Outline Button */
-.hl-btn-dark-grey {
   background-color: #ffffff;
-  color: #0f172a;
+  color: #1c2430;
   border: 1.5px solid #cbd5e1;
   font-size: 14.5px;
   font-weight: 700;
@@ -112,47 +101,18 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
 }
 
-.hl-btn-dark-grey:hover {
-  background-color: #0f172a;
-  color: #ffffff;
-  border-color: #0f172a;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.15);
-}
-
-/* 4. Card Action Button */
-.hl-btn-card-more {
-  align-self: flex-start;
+.hl-btn-secondary:hover {
   background-color: #f8fafc;
-  color: #0f172a;
-  border: 1px solid #e2e8f0;
-  font-size: 13.5px;
-  font-weight: 700;
-  padding: 8px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.hl-btn-card-more:hover {
-  background-color: #0f172a;
-  border-color: #0f172a;
-  color: #ffffff;
-}
-
-.hl-cta-action-row {
-  display: flex;
-  gap: 16px;
-  margin-top: 28px;
-  flex-wrap: wrap;
+  border-color: #1c2430;
+  transform: translateY(-2px);
 }
 
 /* ====================================================
-   FLOATING ACTION ICONS
+   FLOATING ACTION BAR
    ==================================================== */
 .hl-floating-bar {
   position: fixed;
@@ -184,298 +144,418 @@ button {
 }
 
 .hl-fab-phone {
-  background-color: #0f172a;
+  background-color: #1c2430;
   border-bottom-right-radius: 8px;
 }
 
 /* ====================================================
-   HERO SECTION
+   1. HERO SECTION
    ==================================================== */
 .hl-hero-section {
   position: relative;
-  min-height: 640px;
-  background-image: 
-    linear-gradient(
-      135deg, 
-      rgba(11, 19, 41, 0.20) 0%, 
-      rgba(15, 23, 42, 0.20) 100%
-    ),
-    url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80");
-  background-size: cover;
-  background-position: center 15%;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  padding: 85px 40px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
-.hl-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
-  background-size: 26px 26px;
-  pointer-events: none;
+  background-color: #eff1f4;
+  padding: 85px 20px 80px 20px;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .hl-hero-container {
-  max-width: 1320px;
-  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 40px;
-  align-items: center;
-  position: relative;
-  z-index: 2;
 }
 
 .hl-pill-badge {
   display: inline-block;
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #f8fafc;
-  padding: 6px 16px;
-  font-size: 13px;
-  font-weight: 700;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #1c2430;
+  padding: 6px 18px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
   border-radius: 20px;
-  margin-bottom: 22px;
-  backdrop-filter: blur(4px);
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .hl-hero-heading {
-  font-size: 42px;
-  line-height: 1.22;
+  font-size: 46px;
+  line-height: 1.2;
   font-weight: 900;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  color: #1c2430;
   letter-spacing: -0.5px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .hl-hero-highlight {
-  color: #f59e0b;
-  font-weight: 900;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.15);
+  color: #0f172a;
 }
 
 .hl-hero-subtext {
-  font-size: 16px;
+  font-size: 16.5px;
   line-height: 1.65;
-  color: #ffffff;
-  max-width: 520px;
-  margin-bottom: 30px;
-  font-weight: 500;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.15);
+  color: #475569;
+  max-width: 760px;
+  margin: 0 auto 32px auto;
 }
 
 .hl-hero-cta-group {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 16px;
   margin-bottom: 24px;
   flex-wrap: wrap;
 }
 
-.hl-hero-tagline {
-  font-size: 14.5px;
-  font-weight: 600;
-  color: #f1f5f9;
-  margin-bottom: 16px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.15);
-}
-
 .hl-hero-perks {
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
-  color: #ffffff;
+  color: #64748b;
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 50px;
   flex-wrap: wrap;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hl-divider {
-  color: rgba(255, 255, 255, 0.5);
+  color: #cbd5e1;
 }
 
-/* ====================================================
-   DESKTOP SCREENSHOT SLIDER (MEDIUM BALANCED SIZE)
-   ==================================================== */
-.hl-hero-preview-col {
-  position: relative;
-  width: 100%;
-}
-
-.hl-hero-carousel-container {
-  position: relative;
-  width: 100%;
-  max-width: 570px; /* Thoda sa bada kiya */
-  margin: 0 auto;
-}
-
-.hl-carousel-slide-wrapper {
-  position: relative;
-  width: 99%;
-  height: 390px; /* Height 380px se badha kar 420px ki gayi */
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 22px 55px -15px rgba(0, 0, 0, 0.6);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  background-color: #0b1728;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hl-carousel-image-slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-}
-
-.hl-carousel-image-slide.active {
-  opacity: 1;
-}
-
-.hl-carousel-image-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-.hl-slider-dots {
-  display: flex;
-  justify-content: center;
-  gap: 9px;
-  margin-top: 16px;
-}
-
-.hl-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.hl-dot.active {
-  background: #f59e0b;
-  width: 24px;
-  border-radius: 6px;
-}
-
-/* ====================================================
-   SERVICES SECTION
-   ==================================================== */
-.hl-services-section {
-  padding: 85px 40px;
-  background-color: #ffffff;
-}
-
-.hl-section-title-wrap {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.hl-section-title {
-  font-size: 32px;
-  margin-top: 8px;
-  font-weight: 800;
-  color: #0f172a;
-  line-height: 1.3;
-}
-
-.hl-services-grid {
-  max-width: 1240px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.hl-service-card {
+/* Product Dock */
+.hl-product-dock {
   background: #ffffff;
-  padding: 32px 26px;
-  border-radius: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.07);
+}
+
+.hl-dock-tabs {
   display: flex;
-  flex-direction: column;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 
-.hl-service-card:hover {
-  transform: translateY(-5px);
-  border-color: #cbd5e1;
-  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.1);
-}
-
-.hl-service-icon-wrap {
-  width: 52px;
-  height: 52px;
+.hl-dock-tab-btn {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-  transition: all 0.25s ease;
-}
-
-.hl-service-card:hover .hl-service-icon-wrap {
-  background: #ffffff;
-  border-color: #cbd5e1;
-}
-
-.hl-service-card h3 {
-  font-size: 17px;
-  font-weight: 800;
-  color: #0f172a;
-  margin-bottom: 4px;
-}
-
-.hl-service-card h4 {
-  font-size: 13px;
-  font-weight: 600;
   color: #64748b;
-  margin-bottom: 14px;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 9px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.hl-service-card p {
-  font-size: 14px;
-  line-height: 1.6;
+.hl-dock-tab-btn.active {
+  background: #1c2430;
+  color: #ffffff;
+  border-color: #1c2430;
+}
+
+.hl-dock-content-card {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 40px;
+  align-items: center;
+  text-align: left;
+  padding: 15px;
+}
+
+.hl-dock-tag {
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1c2430;
+  font-weight: 800;
+}
+
+.hl-dock-text h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1c2430;
+  margin: 6px 0 12px 0;
+}
+
+.hl-dock-text p {
+  font-size: 14.5px;
   color: #475569;
-  flex-grow: 1;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.hl-dock-bullets {
+  list-style: none;
   margin-bottom: 22px;
 }
 
-/* ====================================================
-   METRICS BANNER
-   ==================================================== */
-.hl-metrics-banner {
+.hl-dock-bullets li {
+  font-size: 14px;
+  color: #334155;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hl-dock-bullets li span {
+  color: #1c2430;
+  font-weight: bold;
+}
+
+.hl-dock-link {
+  color: #1c2430;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.hl-dock-link:hover {
+  text-decoration: underline;
+}
+
+/* Dock Browser Media & Coming Soon Overlay */
+.hl-dock-media {
+  position: relative;
+}
+
+.hl-browser-frame {
+  position: relative;
   background: #f8fafc;
-  color: #0f172a;
-  padding: 75px 40px;
-  text-align: center;
-  border-top: 1px solid #e2e8f0;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Sleek Prominent Coming Soon Badge */
+.dock-coming-soon-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: rgba(28, 36, 48, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.dock-pulse-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #22c55e;
+  animation: pulseDotLive 1.6s infinite ease-in-out;
+}
+
+@keyframes pulseDotLive {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.6;
+  }
+}
+
+.hl-browser-dots {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+.hl-browser-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+
+.hl-browser-frame img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.hl-browser-frame:hover img {
+  transform: scale(1.02);
+}
+
+/* ====================================================
+   2. OTA & GATEWAYS - REAL BRAND STYLING
+   ==================================================== */
+.hl-partners-strip {
+  background: #ffffff;
+  padding: 40px 20px;
   border-bottom: 1px solid #e2e8f0;
 }
 
-.hl-metrics-title {
-  font-size: 30px;
+.hl-partners-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hl-partners-label {
+  font-size: 11.5px;
+  letter-spacing: 2px;
+  color: #64748b;
+  margin-bottom: 24px;
   font-weight: 800;
-  margin-bottom: 40px;
-  line-height: 1.3;
+}
+
+.hl-partners-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.brand-logo {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.4px;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.25s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.brand-logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* 1. Booking.com Official Blue */
+.brand-booking {
+  color: #003580;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 2. Agoda Multi-Color Circles Feel */
+.brand-agoda {
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.agoda-a { color: #eb2027; }
+.agoda-g { color: #f58220; }
+.agoda-o { color: #8dc63f; }
+.agoda-d { color: #00aeef; }
+.agoda-last { color: #7f3f98; }
+
+/* 3. Expedia Navy & Yellow Feel */
+.brand-expedia {
+  color: #00355f;
+  font-style: italic;
+  font-weight: 900;
+}
+
+/* 4. Airbnb Coral Rausch */
+.brand-airbnb {
+  color: #ff385c;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+/* ====================================================
+   3. PROBLEM VS SOLUTION (CENTERED & EXTRA WIDE)
+   ==================================================== */
+.hl-comparison-section {
+  padding: 90px 0;
+  background-color: #f2f3f6;
+}
+
+.hl-single-card-centered {
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hl-comp-card {
+  border-radius: 16px;
+  padding: 48px 52px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.hl-comp-haalo {
+  border-left: 5px solid #1c2430;
+}
+
+.hl-comp-badge {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 6px;
+  margin-bottom: 26px;
+}
+
+.badge-haalo {
+  background: #f8fafc;
+  color: #1c2430;
+  border: 1px solid #cbd5e1;
+}
+
+.hl-comp-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hl-comp-card li {
+  font-size: 16px;
+  color: #334155;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hl-tick {
+  color: #1c2430;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+/* ====================================================
+   4. METRICS BANNER
+   ==================================================== */
+.hl-metrics-banner {
+  background: #2a323e;
+  color: #ffffff;
+  padding: 60px 20px;
 }
 
 .hl-metrics-grid {
@@ -483,915 +563,271 @@ button {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-}
-
-.hl-metric-box {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  padding: 30px 18px;
-  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
-  transition: all 0.25s ease;
-}
-
-.hl-metric-box:hover {
-  transform: translateY(-4px);
-  border-color: #cbd5e1;
-  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
-}
-
-.hl-m-icon {
-  font-size: 30px;
-  margin-bottom: 10px;
+  gap: 24px;
+  text-align: center;
 }
 
 .hl-m-val {
   font-size: 38px;
   font-weight: 900;
-  color: #0f172a;
+  color: #ffffff;
   letter-spacing: -0.5px;
 }
 
 .hl-m-lbl {
-  font-size: 14px;
-  margin-top: 6px;
-  font-weight: 600;
-  color: #64748b;
-}
-
-/* ====================================================
-   HOTEL PMS HIGHLIGHT
-   ==================================================== */
-.hl-highlight-section {
-  padding: 85px 40px;
-  background: #ffffff;
-}
-
-.hl-highlight-content {
-  max-width: 1240px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: 55px;
-  align-items: center;
-}
-
-.hl-section-heading-lg {
-  font-size: 30px;
-  font-weight: 800;
-  color: #0f172a;
-}
-
-.hl-section-sub-tag {
-  font-size: 14.5px;
-  color: #64748b;
-  margin: 6px 0 18px 0;
-  font-weight: 600;
-}
-
-.hl-highlight-info p {
-  font-size: 14.5px;
-  color: #475569;
-  line-height: 1.65;
-  margin-bottom: 14px;
-}
-
-.hl-pms-capsule-grid {
-  margin-top: 24px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.hl-capsule {
-  background: #f8fafc;
-  padding: 13px 18px;
-  border-radius: 10px;
-  border: 1px solid #e2e8f0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: 13.5px;
-  font-weight: 600;
-  color: #1e293b;
-  transition: all 0.2s ease;
-}
-
-.hl-capsule:hover {
-  background: #ffffff;
-  border-color: #cbd5e1;
-  transform: translateX(4px);
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
-}
-
-.hl-capsule i {
-  color: #64748b;
-  font-style: normal;
-  font-weight: bold;
-}
-
-.hl-visual-media-box {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.14);
-  border: 1px solid #e2e8f0;
-}
-
-.hl-feature-preview-img {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-  display: block;
-}
-
-.hl-feature-floating-badge {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background: rgba(15, 23, 42, 0.92);
-  color: #ffffff;
-  padding: 14px 20px;
-  border-radius: 10px;
-  font-size: 13.5px;
-  text-align: center;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-/* ====================================================
-   AI ANALYSIS SECTION
-   ==================================================== */
-.hl-ai-analysis {
-  position: relative;
-  background-color: #0b1329;
-  background: linear-gradient(135deg, #090e1a 0%, #0f172a 100%);
-  color: #ffffff;
-  padding: 85px 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.hl-ai-container {
-  max-width: 1240px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 65px;
-  align-items: center;
-}
-
-.hl-ai-chip-card {
-  position: relative;
-  background: #1e293b;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
-  height: 320px;
-  overflow: hidden;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-}
-
-.hl-ai-visual-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.hl-ai-chip-card:hover .hl-ai-visual-img {
-  transform: scale(1.04);
-}
-
-.hl-ai-chip-badge {
-  position: absolute;
-  bottom: 18px;
-  left: 18px;
-  width: 52px;
-  height: 52px;
-  background: #0f172a;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 800;
-  color: #ffffff;
-}
-
-.hl-ai-right-content h2 {
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 14px;
-  line-height: 1.25;
-}
-
-.hl-ai-right-content h2 span {
-  color: #ffffff !important;
-}
-
-.hl-ai-sub-desc {
-  font-size: 14.5px;
-  color: #94a3b8;
-  margin-bottom: 22px;
-}
-
-.hl-bullet-list {
-  list-style: none;
-  margin-bottom: 28px;
-}
-
-.hl-bullet-list li {
-  font-size: 14.5px;
-  color: #e2e8f0;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.hl-bullet-list li::before {
-  content: "✓";
-  color: #c9972c;
-  font-weight: bold;
-}
-
-.hl-ai-bottom-row {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.hl-chatgpt-powered-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.04);
-  padding: 8px 18px;
-  border-radius: 8px;
-  font-size: 13px;
-}
-
-.hl-gpt-icon {
-  font-size: 20px;
   color: #cbd5e1;
-}
-
-.hl-gpt-text {
-  color: #94a3b8;
-}
-
-.hl-gpt-text b {
-  color: #ffffff;
+  margin-top: 4px;
+  font-weight: 600;
 }
 
 /* ====================================================
-   CHANNEL MANAGER
+   5. ONBOARDING STEPS
    ==================================================== */
-.hl-channel-section {
-  padding: 85px 40px;
-  background: #ffffff;
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-.hl-channel-diagram-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  border: 1px solid #e2e8f0;
-  padding: 34px;
-  border-radius: 16px;
-  margin-bottom: 45px;
-  background: #f8fafc;
-}
-
-.hl-diagram-node {
-  background: #ffffff;
-  border: 1.5px solid #cbd5e1;
-  padding: 12px 22px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 700;
-  color: #0f172a;
-}
-
-.hl-diagram-arrow {
-  color: #0f172a;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.hl-diagram-center-wheel {
-  border: 2px solid #0f172a;
-  padding: 14px 28px;
-  border-radius: 50px;
-  text-align: center;
+.hl-steps-section {
+  padding: 85px 0;
   background: #ffffff;
 }
 
-.hl-wheel-title {
-  font-size: 14.5px;
-  font-weight: 800;
-  color: #0f172a;
-}
-
-.hl-wheel-sub {
-  font-size: 12px;
-  color: #64748b;
-  display: block;
-}
-
-.hl-channel-detail-grid {
+.hl-steps-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 45px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
-.hl-channel-left h2 {
-  font-size: 28px;
-  font-weight: 800;
-  color: #0f172a;
-}
-
-.hl-channel-left h4 {
-  font-size: 14.5px;
-  color: #64748b;
-  margin: 6px 0 16px 0;
-}
-
-.hl-channel-left p {
-  font-size: 14.5px;
-  color: #475569;
-  line-height: 1.65;
-}
-
-.hl-bullet-list-tight {
-  list-style: none;
+.hl-step-item {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
-  padding: 24px;
+  padding: 34px 26px;
+  transition: transform 0.2s ease;
 }
 
-.hl-bullet-list-tight li {
-  font-size: 14px;
-  color: #334155;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.hl-step-item:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
 }
 
-.hl-bullet-list-tight li:last-child {
-  margin-bottom: 0;
-}
-
-.hl-bullet-list-tight li::before {
-  content: "•";
-  color: #0f172a;
-  font-size: 20px;
-}
-
-/* ====================================================
-   BOOKING ENGINE SHOWCASE
-   ==================================================== */
-.hl-booking-engine-showcase {
-  background-color: #f8fafc;
-  color: #0f172a;
-  padding: 85px 40px;
-  border-top: 1px solid #e2e8f0;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.hl-be-inner-grid {
-  max-width: 1240px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 55px;
-  align-items: center;
-}
-
-.hl-be-main-title {
+.hl-step-num {
   font-size: 32px;
   font-weight: 900;
-  line-height: 1.25;
+  color: #1c2430;
+  margin-bottom: 12px;
 }
 
-.hl-be-sub-tag {
-  color: #64748b;
-  font-size: 14.5px;
-  margin: 8px 0 18px 0;
-  font-weight: 600;
-}
-
-.hl-be-desc {
-  font-size: 14.5px;
-  color: #475569;
-  line-height: 1.65;
-  margin-bottom: 18px;
-}
-
-.hl-be-checklist {
-  list-style: none;
-}
-
-.hl-be-checklist li {
-  font-size: 14px;
-  color: #334155;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.hl-be-checklist li::before {
-  content: "✓";
-  color: #0f172a;
-  font-weight: bold;
-}
-
-.hl-engine-showcase-box {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12);
-  border: 1px solid #e2e8f0;
-}
-
-.hl-booking-engine-image {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-  display: block;
-}
-
-/* ====================================================
-   TESTIMONIAL BANNER
-   ==================================================== */
-.hl-testimonial-section {
-  background-color: #ffffff;
-  color: #0f172a;
-  padding: 85px 40px;
-}
-
-.hl-testi-header {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.hl-testi-header h2 {
-  font-size: 30px;
-  font-weight: 800;
-  line-height: 1.3;
-}
-
-.hl-testi-card-wrapper {
-  max-width: 950px;
-  margin: 0 auto;
-}
-
-.hl-testi-card {
-  background: #ffffff;
-  border-radius: 16px;
-  display: grid;
-  grid-template-columns: 1fr 1.25fr;
-  overflow: hidden;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);
-}
-
-.hl-testi-image-col {
-  background: linear-gradient(rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.7)),
-    url("https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80") center/cover no-repeat;
-  min-height: 300px;
-  display: flex;
-  align-items: flex-end;
-  padding: 24px;
-}
-
-.hl-resort-badge-card {
-  background: rgba(15, 23, 42, 0.88);
-  padding: 10px 18px;
-  border-radius: 8px;
-  color: #ffffff;
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.hl-resort-badge-card b {
-  display: block;
-  font-size: 14.5px;
-}
-
-.hl-resort-badge-card span {
-  font-size: 12px;
-  color: #cbd5e1;
-}
-
-.hl-testi-content-col {
-  padding: 44px;
-  color: #1e293b;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hl-quote-mark {
-  font-size: 46px;
-  color: #cbd5e1;
-  line-height: 1;
-}
-
-.hl-testi-quote-text {
-  font-size: 14.5px;
-  color: #475569;
-  line-height: 1.65;
-  margin: 10px 0 20px 0;
-}
-
-.hl-owner-name {
+.hl-step-item h4 {
   font-size: 17px;
   font-weight: 800;
-  color: #0f172a;
-}
-
-.hl-owner-designation {
-  font-size: 13px;
-  color: #64748b;
-  font-weight: 700;
-}
-
-/* ====================================================
-   GOOGLE REVIEWS SECTION
-   ==================================================== */
-.hl-reviews-section {
-  padding: 85px 20px;
-  background-color: #f8fafc;
-  text-align: center;
-  overflow: hidden;
-  border-top: 1px solid #e2e8f0;
-}
-
-.hl-reviews-header-block {
-  margin-bottom: 45px;
-}
-
-.hl-reviews-header-block h2 {
-  font-size: 30px;
-  font-weight: 800;
-  color: #0f172a;
-}
-
-.hl-google-brand-title {
-  font-size: 38px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  margin-top: 8px;
-  font-family: "Product Sans", Roboto, sans-serif;
-}
-
-.hl-g-blue { color: #4285f4; }
-.hl-g-red { color: #ea4335; }
-.hl-g-yellow { color: #fbbc05; }
-.hl-g-green { color: #34a853; }
-
-.hl-reviews-sub-lbl {
-  display: block;
-  font-size: 13.5px;
-  color: #64748b;
-  margin-top: -2px;
-  font-weight: 600;
-}
-
-.hl-rating-pill-card {
-  display: inline-block;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  padding: 10px 28px;
-  border-radius: 30px;
-  margin-top: 20px;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
-}
-
-.hl-rating-pill-card b {
-  font-size: 14.5px;
-  color: #0f172a;
-}
-
-.hl-star-rating {
-  color: #f59e0b;
-  font-size: 16px;
-  margin-top: 4px;
-}
-
-.hl-reviews-scroll-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  padding: 20px 0;
-}
-
-.hl-reviews-track {
-  display: flex;
-  gap: 20px;
-  width: max-content;
-  animation: hlScrollMarquee 35s linear infinite;
-}
-
-.hl-reviews-track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes hlScrollMarquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.hl-review-item-card {
-  background: #ffffff;
-  padding: 26px 22px;
-  border-radius: 14px;
-  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  flex-shrink: 0;
-  border: 1px solid #e2e8f0;
-  transition: all 0.25s ease;
-}
-
-.hl-review-item-card:hover {
-  transform: translateY(-4px);
-  border-color: #cbd5e1;
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
-}
-
-.hl-client-logo-circle {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: #f1f5f9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  margin: 0 auto 12px auto;
-}
-
-.hl-reviewer-name {
-  font-size: 14.5px;
-  font-weight: 800;
-  color: #0f172a;
-  margin-bottom: 3px;
-}
-
-.hl-reviewer-tag {
-  font-size: 12.5px;
-  color: #64748b;
-  font-weight: 600;
+  color: #1c2430;
   margin-bottom: 8px;
 }
 
-.hl-card-stars {
-  font-size: 13px;
-  color: #0f172a;
-  margin-bottom: 10px;
-}
-
-.hl-card-stars b {
-  font-size: 13.5px;
-  margin-right: 4px;
-}
-
-.hl-stars-gold {
-  color: #f59e0b;
-}
-
-.hl-review-body {
-  font-size: 13.5px;
+.hl-step-item p {
+  font-size: 14px;
+  color: #64748b;
   line-height: 1.6;
-  color: #475569;
-  text-align: center;
 }
 
 /* ====================================================
-   RESPONSIVE (TABLET & DESKTOP BREAKPOINTS)
+   6. FAQ ACCORDION
+   ==================================================== */
+.hl-faq-section {
+  padding: 85px 0;
+  background: #f8fafc;
+}
+
+.hl-faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hl-faq-card {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 18px 22px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.hl-faq-card.expanded {
+  border-color: #1c2430;
+}
+
+.hl-faq-q-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hl-faq-q-row h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1c2430;
+}
+
+.hl-faq-btn {
+  font-size: 18px;
+  color: #1c2430;
+  font-weight: bold;
+}
+
+.hl-faq-ans {
+  font-size: 14px;
+  color: #475569;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+/* ====================================================
+   7. FINAL CALL TO ACTION
+   ==================================================== */
+.hl-final-cta-section {
+  padding: 80px 20px 90px 20px;
+  background: #eff1f4;
+}
+
+.hl-final-box {
+  background: #303c4d;
+  border-radius: 16px;
+  padding: 55px 35px;
+  text-align: center;
+  max-width: 950px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.hl-final-box h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.hl-final-box p {
+  font-size: 16px;
+  color: #cbd5e1;
+  max-width: 650px;
+  margin: 0 auto 28px auto;
+}
+
+.hl-final-box .hl-btn-navy {
+  background: #ffffff;
+  color: #1c2430;
+  border-color: #ffffff;
+}
+
+.hl-final-box .hl-btn-navy:hover {
+  background: #eff1f4;
+}
+
+.hl-final-box .hl-btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.hl-final-box .hl-btn-secondary:hover {
+  border-color: #ffffff;
+}
+
+.hl-no-risk {
+  display: block;
+  font-size: 12.5px;
+  color: #94a3b8;
+  margin-top: 18px;
+}
+
+/* ====================================================
+   SMOOTH SLIDE ENTRANCE ANIMATIONS
+   ==================================================== */
+@keyframes slideUpSlow {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hl-slide-in {
+  animation: slideUpSlow 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hl-slide-in-delay-1 {
+  opacity: 0;
+  animation: slideUpSlow 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+.hl-slide-in-delay-2 {
+  opacity: 0;
+  animation: slideUpSlow 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+}
+
+.hl-slide-in-delay-3 {
+  opacity: 0;
+  animation: slideUpSlow 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
+}
+
+/* ====================================================
+   RESPONSIVE DESIGN
    ==================================================== */
 @media (max-width: 1024px) {
-  .hl-hero-container {
+  .hl-hero-heading {
+    font-size: 36px;
+  }
+
+  .hl-dock-content-card {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  .hl-carousel-slide-wrapper {
-    height: 350px;
-  }
-
-  .hl-services-grid,
-  .hl-metrics-grid,
-  .hl-highlight-content,
-  .hl-ai-container,
-  .hl-channel-detail-grid,
-  .hl-be-inner-grid,
-  .hl-testi-card {
-    grid-template-columns: 1fr !important;
-  }
-
-  .hl-ai-chip-card {
-    height: 260px;
-    max-width: 480px;
-    margin: 0 auto;
-  }
-
-  .hl-channel-diagram-card {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .hl-diagram-arrow {
-    transform: rotate(90deg);
-  }
-
-  .hl-testi-image-col {
-    min-height: 220px;
-  }
-}
-
-/* ====================================================
-   MOBILE RESPONSIVE (SLIDER REMOVED ON MOBILE)
-   ==================================================== */
-@media (max-width: 768px) {
-  .hl-hero-section {
-    padding: 65px 20px 55px 20px;
-    min-height: auto;
-    background-position: center top;
-  }
-
-  .hl-hero-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0;
-  }
-
-  /* Slider mobile par completely hidden rahega */
-  .hl-hero-preview-col {
-    display: none !important;
-  }
-
-  .hl-hero-text-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
-
-  .hl-pill-badge {
-    margin: 0 auto 16px auto;
-  }
-
-  .hl-hero-heading {
-    font-size: 28px;
-    line-height: 1.3;
-    text-align: center;
-  }
-
-  .hl-hero-subtext {
-    font-size: 15px;
-    text-align: center;
-    margin: 0 auto 24px auto;
-  }
-
-  .hl-hero-cta-group {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .hl-hero-cta-group button {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .hl-hero-tagline {
-    text-align: center;
-  }
-
-  .hl-hero-perks {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .hl-services-section,
-  .hl-highlight-section,
-  .hl-ai-analysis,
-  .hl-channel-section,
-  .hl-booking-engine-showcase,
-  .hl-testimonial-section,
-  .hl-reviews-section,
-  .hl-metrics-banner {
-    padding: 55px 20px;
-  }
-
-  .hl-section-title,
-  .hl-metrics-title,
-  .hl-testi-header h2,
-  .hl-reviews-header-block h2 {
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .hl-section-heading-lg,
-  .hl-ai-right-content h2,
-  .hl-channel-left h2,
-  .hl-be-main-title {
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .hl-highlight-info,
-  .hl-ai-right-content,
-  .hl-channel-left,
-  .hl-be-text-col {
-    text-align: center;
-  }
-
-  .hl-pms-capsule-grid {
-    grid-template-columns: 1fr;
-  }
-
   .hl-metrics-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
   }
 
-  .hl-cta-action-row {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-  }
-
-  .hl-cta-action-row button {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .hl-ai-bottom-row {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .hl-ai-bottom-row button {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .hl-review-item-card {
-    width: 250px;
+  .hl-steps-grid {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .hl-hero-heading {
-    font-size: 24px;
-  }
-
-  .hl-hero-subtext {
-    font-size: 14px;
-  }
-
-  .hl-m-val {
     font-size: 28px;
   }
 
-  .hl-m-lbl {
-    font-size: 12px;
+  .hl-hero-subtext {
+    font-size: 14.5px;
   }
 
-  .hl-capsule {
-    font-size: 12.5px;
-    padding: 11px 14px;
+  .hl-heading-center h2,
+  .hl-final-box h2 {
+    font-size: 24px;
   }
 
-  .hl-floating-bar {
-    top: 50%;
-    transform: translateY(-50%);
+  .hl-comp-card {
+    padding: 30px 20px;
   }
 
-  .hl-fab-item {
-    width: 40px;
-    height: 40px;
+  .hl-comp-card li {
+    font-size: 14.5px;
+  }
+
+  .hl-browser-frame img {
+    height: 220px;
+  }
+
+  .hl-partners-logos {
+    gap: 16px;
+  }
+
+  .brand-logo {
+    font-size: 16px;
+    padding: 6px 12px;
   }
 }

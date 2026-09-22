@@ -16,18 +16,6 @@ function Services() {
       ],
     },
     {
-      icon: "🌐",
-      title: "Channel Manager",
-      desc: "Synchronize your rates and availability across 50+ OTA platforms instantly to prevent double bookings.",
-      features: [
-        "Multi-OTA Sync",
-        "Rate Management",
-        "Instant Updates",
-        "Booking Confirmation",
-        "Cancellation Handling",
-      ],
-    },
-    {
       icon: "🛒",
       title: "Direct Booking Engine",
       desc: "Commission-free booking system integrated with payment gateways for direct reservations on your website.",
@@ -40,27 +28,15 @@ function Services() {
       ],
     },
     {
-      icon: "💬",
-      title: "WhatsApp Automation API",
-      desc: "Automated guest communication, confirmations, and support through WhatsApp for better engagement.",
+      icon: "⚙️",
+      title: "Channel Manager (OTA Sync)",
+      desc: "Real-time 2-way distribution engine connecting your room inventory with major online travel agencies to prevent overbookings.",
       features: [
-        "Auto Confirmations",
-        "Booking Reminders",
-        "Guest Support",
-        "Promotions & Offers",
-        "24/7 Availability",
-      ],
-    },
-    {
-      icon: "🤖",
-      title: "AI-Driven Hotel Intelligence",
-      desc: "Leverage AI for predictive analytics, dynamic pricing, and automated business audits.",
-      features: [
-        "Price Optimization",
-        "Demand Forecasting",
-        "Competitor Tracking",
-        "Revenue Recommendations",
-        "Smart Analytics",
+        "Instant 2-Way Sync",
+        "Zero Overbooking Risk",
+        "Pooled Inventory Control",
+        "Bulk Rate Management",
+        "Real-Time Cancellations",
       ],
     },
   ];
@@ -102,56 +78,15 @@ function Services() {
       ),
     },
     {
-      name: "MakeMyTrip",
+      name: "Expedia",
       category: "OTA Channel",
       svg: (
         <svg viewBox="0 0 135 28" className="brand-svg">
-          <text x="0" y="20" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="900" fontSize="17" fill="#d9232d">
-            make<tspan fill="#0f172a">my</tspan><tspan fill="#d9232d">trip</tspan>
+          <circle cx="12" cy="14" r="9" fill="#00355f" />
+          <path d="M7 14.5l3.5-3 5.5 1-2.5 2 4 0.5-1 1.5-3.5-0.5-2 2z" fill="#ffcc00" />
+          <text x="28" y="20" fontFamily="system-ui, -apple-system, sans-serif" fontStyle="italic" fontWeight="900" fontSize="18" fill="#00355f">
+            Expedia
           </text>
-        </svg>
-      ),
-    },
-    {
-      name: "Razorpay",
-      category: "Payment Gateway",
-      svg: (
-        <svg viewBox="0 0 125 28" className="brand-svg">
-          <path d="M11 2H4.8a1 1 0 0 0-.97.77L1 14.5h4.8l-.8 7.5 8.8-9.6H8.9L11 2z" fill="#0C2340" />
-          <path d="M12.2 2l-4.8 6.4h4L6.6 18l1.6-4.8H5l1.6-11.2h5.6z" fill="#3395FF" />
-          <text x="24" y="20" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="800" fontSize="15" fill="#0C2340">Razorpay</text>
-        </svg>
-      ),
-    },
-    {
-      name: "PayU",
-      category: "Payment Gateway",
-      svg: (
-        <svg viewBox="0 0 85 28" className="brand-svg">
-          <text x="0" y="21" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="900" fontSize="21" fill="#a4c639">
-            Pay<tspan fill="#1e293b">U</tspan>
-          </text>
-        </svg>
-      ),
-    },
-    {
-      name: "PhonePe",
-      category: "UPI & Wallets",
-      svg: (
-        <svg viewBox="0 0 120 28" className="brand-svg">
-          <circle cx="12" cy="14" r="11" fill="#5f259f" />
-          <text x="7.5" y="19.5" fill="#ffffff" fontFamily="system-ui, sans-serif" fontWeight="bold" fontSize="14">पे</text>
-          <text x="30" y="20" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="800" fontSize="16" fill="#5f259f">PhonePe</text>
-        </svg>
-      ),
-    },
-    {
-      name: "WhatsApp",
-      category: "Direct Channel",
-      svg: (
-        <svg viewBox="0 0 130 28" className="brand-svg">
-          <path d="M11 2a9.5 9.5 0 0 0-8.2 14.3L1.5 22l5.8-1.5A9.5 9.5 0 1 0 11 2zm0 17.5c-1.4 0-2.8-.4-4-1.1l-.3-.2-2.9.8.8-2.8-.2-.3a8 8 0 1 1 6.6 3.6z" fill="#25D366" />
-          <text x="28" y="20" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="800" fontSize="16" fill="#1e293b">WhatsApp</text>
         </svg>
       ),
     },
@@ -178,7 +113,7 @@ function Services() {
         <div className="services-container">
           <div className="section-intro">
             <h2>Our Complete Suite of Services</h2>
-            <p>From property management to guest communication, we've got you covered</p>
+            <p>From property management to multi-channel distribution, we've got you covered</p>
           </div>
 
           <div className="services-grid">

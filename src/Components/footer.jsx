@@ -153,14 +153,9 @@ function Footer() {
               </a>
             </li>
 
-            <li>
-              <a href="#revenue-management">
-                Revenue Management
-              </a>
-            </li>
 
             <li>
-              <a href="#hotel-website">
+              <a href="https://ahaalopms.com/">
                 Hotel Website Design
               </a>
             </li>
@@ -181,26 +176,21 @@ function Footer() {
 
           <ul className="footer-links">
 
-            <li>
-              <a href="#pricing">
-                Pricing Plans
-              </a>
-            </li>
 
             <li>
-              <a href="#hotelier-stories">
+              <a href="https://ahaalopms-com.vercel.app/">
                 Free Trial
               </a>
             </li>
 
             <li>
-              <a href="#resources">
+              <a href="/support">
                 Help &amp; Support
               </a>
             </li>
 
             <li>
-              <a href="#contact">
+              <a href="/contact">
                 Contact Us
               </a>
             </li>
@@ -253,8 +243,8 @@ function Footer() {
                 ✉️
               </span>
 
-              <a href="mailto:support@ahaalo.in">
-                support@ahaalo.in
+              <a href="mailto:support@admin.in">
+                support@admin.in
               </a>
             </li>
 
