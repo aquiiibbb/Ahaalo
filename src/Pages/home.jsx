@@ -159,25 +159,34 @@ function Home() {
                       Explore This Module In Live Demo →
                     </a>
                   </div>
-                  
+
+                  {/* MEDIA BOX WITH EXACT CENTERED LOCK & COMING SOON CARD */}
                   <div className="hl-dock-media">
                     <div className="hl-browser-frame">
-                      {/* ATTRACTIVE COMING SOON OVERLAY BADGE */}
-                      <div className="dock-coming-soon-badge">
-                        <span className="dock-pulse-dot"></span>
-                        <span>COMING SOON</span>
-                      </div>
-
+                      {/* BROWSER TOP DOTS */}
                       <div className="hl-browser-dots">
                         <span></span><span></span><span></span>
                       </div>
-                      <img
-                        src={tab.image}
-                        alt={tab.title}
-                        onError={(e) => {
-                          e.target.src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80";
-                        }}
-                      />
+
+                      {/* BLURRED IMAGE CONTAINER */}
+                      <div className="hl-dock-image-container">
+                        <div
+                          className="hl-dock-blurred-bg"
+                          style={{
+                            backgroundImage: `url(${tab.image})`,
+                          }}
+                        ></div>
+
+                        {/* DARK TRANSPARENT SCRIM */}
+                        <div className="hl-dock-dark-scrim"></div>
+
+                        {/* EXACT COMING SOON CARD */}
+                        <div className="hl-dock-coming-soon-card">
+                          <div className="hl-lock-icon">🔒</div>
+                          <span className="hl-lock-title">COMING SOON</span>
+                          <span className="hl-lock-sub">Interactive Preview in Production</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

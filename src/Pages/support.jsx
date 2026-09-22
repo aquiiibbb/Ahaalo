@@ -15,8 +15,8 @@ function Support() {
       icon: "✉️",
       title: "Email Support",
       desc: "Get detailed responses within 24 hours",
-      contact: "info@ahaalo.in",
-      link: "mailto:info@ahaalo.in",
+      contact: "admin@ahaalo.com",
+      link: "mailto:admin@ahaalo.com",
       hours: "24/7",
     },
     {
@@ -151,7 +151,7 @@ function Support() {
         </div>
       </section>
 
-      {/* VIDEO TUTORIALS SECTION */}
+      {/* VIDEO TUTORIALS SECTION WITH FULL BLUR & BIG COMING SOON OVERLAY */}
       <section className="video-section">
         <div className="video-container">
           <h2>Video Tutorials &amp; Training</h2>
@@ -160,21 +160,23 @@ function Support() {
           <div className="video-grid">
             {videoTutorials.map((video, idx) => (
               <div key={idx} className="video-card">
-                <div
-                  className="video-placeholder"
-                  style={{
-                    backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.75)), url(${video.thumbnail})`,
-                  }}
-                >
-                  {/* ATTRACTIVE GLASSMORPHIC BADGE */}
-                  <div className="video-coming-soon-tag">
-                    <span className="badge-pulse-dot"></span>
-                    COMING SOON
-                  </div>
+                <div className="video-placeholder-container">
+                  {/* FULLY BLURRED BACKGROUND IMAGE */}
+                  <div
+                    className="video-blurred-bg"
+                    style={{
+                      backgroundImage: `url(${video.thumbnail})`,
+                    }}
+                  ></div>
 
-                  {/* GLOWING PLAY BUTTON */}
-                  <div className="play-icon-wrap">
-                    <span className="play-icon">▶</span>
+                  {/* DARK SHADOW OVERLAY FOR CONTRAST */}
+                  <div className="video-dark-scrim"></div>
+
+                  {/* BIG PROMINENT COMING SOON BADGE */}
+                  <div className="coming-soon-hero-box">
+                    <div className="cs-icon-circle">🔒</div>
+                    <span className="cs-big-text">COMING SOON</span>
+                    <span className="cs-sub-text">Tutorial in Production</span>
                   </div>
 
                   <span className="video-duration">{video.duration}</span>
@@ -182,7 +184,7 @@ function Support() {
 
                 <div className="video-details">
                   <h4>{video.title}</h4>
-                  <span className="watch-tutorial-btn">Watch Tutorial →</span>
+                  <span className="watch-tutorial-btn disabled-btn">Available Soon →</span>
                 </div>
               </div>
             ))}

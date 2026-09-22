@@ -31,9 +31,9 @@
       rgba(11, 19, 41, 0.25) 0%, 
       rgba(15, 23, 42, 0.25) 100%
     ),
-    url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80");
+    url("https://img.magnific.com/premium-photo/man-having-checkin-hotel_249974-29255.jpg?semt=ais_hybrid&w=740&q=80");
   background-size: cover;
-  background-position: center 15%;
+  background-position: center 25%;
   background-repeat: no-repeat;
   padding: 85px 20px;
 }

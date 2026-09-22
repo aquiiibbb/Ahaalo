@@ -224,7 +224,7 @@ function Footer() {
               </span>
 
               <span>
-                123 Hospitality Hub, Business Park, India
+               Hollister Inn, 152 San Felipe Rd, Hollister, CA 95023, United States
               </span>
             </li>
 
@@ -234,7 +234,7 @@ function Footer() {
               </span>
 
               <a href="tel:+917225962759">
-                +91 7225962759
+                 +91 72259 62759
               </a>
             </li>
 
@@ -243,8 +243,8 @@ function Footer() {
                 ✉️
               </span>
 
-              <a href="mailto:support@admin.in">
-                support@admin.in
+              <a href="mailto:admin@ahaalo.com">
+               admin@ahaalo.com
               </a>
             </li>
 

@@ -1,5 +1,5 @@
 /* ====================================================
-   SUPPORT PAGE STYLESHEET (CLEAN & ATTRACTIVE CARDS)
+   SUPPORT PAGE STYLESHEET (BLURRED VIDEO & BIG COMING SOON)
    ==================================================== */
 .bm-support-wrapper {
   background-color: #f8fafc;
@@ -30,7 +30,7 @@
       rgba(11, 19, 41, 0.25) 0%, 
       rgba(15, 23, 42, 0.25) 100%
     ),
-    url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80");
+    url("https://lesroches.edu/wp-content/uploads/2025/10/hero-hotel-management-careers.jpg");
   background-size: cover;
   background-position: center 15%;
   background-repeat: no-repeat;
@@ -273,7 +273,7 @@
   font-size: 12px;
 }
 
-/* ====== VIDEO SECTION & ATTRACTIVE CARDS ====== */
+/* ====== VIDEO SECTION & HEAVILY BLURRED THUMBNAILS ====== */
 .video-section {
   padding: 80px 20px;
   background-color: #f2f3f6;
@@ -315,14 +315,12 @@
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   overflow: hidden;
-  text-decoration: none;
-  color: inherit;
   display: flex;
   flex-direction: column;
   box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(0, 0, 0, 0.03);
   opacity: 0;
   animation: slowSlideUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   cursor: default;
 }
@@ -333,104 +331,88 @@
 .video-card:nth-child(4) { animation-delay: 0.9s; }
 
 .video-card:hover {
-  border-color: #1c2430;
-  box-shadow: 0 18px 36px -6px rgba(28, 36, 48, 0.16), 0 8px 18px -4px rgba(28, 36, 48, 0.12);
-  transform: translateY(-6px);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.14);
 }
 
-.video-placeholder {
+/* Container for blurred background */
+.video-placeholder-container {
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  height: 190px;
   position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   overflow: hidden;
-}
-
-/* ATTRACTIVE GLASSMORPHIC COMING SOON PILL */
-.video-coming-soon-tag {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(15, 23, 42, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  padding: 6px 14px;
-  border-radius: 24px;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  color: #ffffff;
-  font-size: 10.5px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-  z-index: 4;
-}
-
-.badge-pulse-dot {
-  width: 7px;
-  height: 7px;
-  background-color: #22c55e;
-  border-radius: 50%;
-  box-shadow: 0 0 8px #22c55e;
-  animation: pulseGlowing 1.6s infinite ease-in-out;
-}
-
-@keyframes pulseGlowing {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.4);
-    opacity: 0.55;
-  }
-}
-
-/* GLOWING PLAY BUTTON */
-.play-icon-wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.95);
-  color: #1c2430;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 4px rgba(255, 255, 255, 0.2);
-  transition: transform 0.25s ease, background 0.25s ease;
+  background-color: #0b1120;
+}
+
+/* Extreme blur applied directly on the background */
+.video-blurred-bg {
+  position: absolute;
+  inset: -15px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px) brightness(0.65);
+  transform: scale(1.15);
+}
+
+/* Scrim layer for readability */
+.video-dark-scrim {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%);
+  z-index: 1;
+}
+
+/* BIG PROMINENT COMING SOON CARD IN CENTER */
+.coming-soon-hero-box {
+  position: relative;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 22px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  transform: translateY(-2px);
 }
 
-.play-icon {
-  font-size: 16px;
-  padding-left: 3px;
-  line-height: 1;
+.cs-icon-circle {
+  font-size: 22px;
+  margin-bottom: 4px;
 }
 
-.video-card:hover .play-icon-wrap {
-  transform: translate(-50%, -50%) scale(1.12);
-  background: #ffffff;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 0 6px rgba(255, 255, 255, 0.3);
+.cs-big-text {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cs-sub-text {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
 }
 
 .video-duration {
   position: absolute;
-  bottom: 12px;
-  right: 12px;
+  bottom: 10px;
+  right: 10px;
   background: rgba(15, 23, 42, 0.85);
   color: #ffffff;
   font-size: 11px;
   font-weight: 700;
-  padding: 4px 9px;
-  border-radius: 6px;
+  padding: 3px 8px;
+  border-radius: 4px;
   letter-spacing: 0.5px;
   backdrop-filter: blur(4px);
   z-index: 3;
@@ -455,14 +437,13 @@
 .watch-tutorial-btn {
   font-size: 13.5px;
   font-weight: 700;
-  color: #1c2430;
+  color: #64748b;
   margin-top: auto;
-  transition: padding-left 0.2s ease, color 0.2s ease;
 }
 
-.video-card:hover .watch-tutorial-btn {
-  padding-left: 5px;
-  color: #0f172a;
+.disabled-btn {
+  color: #94a3b8;
+  cursor: default;
 }
 
 /* ====== FAQ SECTION ====== */
