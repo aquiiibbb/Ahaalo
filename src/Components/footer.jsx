@@ -155,7 +155,7 @@ function Footer() {
 
 
             <li>
-              <a href="https://pms.ahaalo.com">
+              <a href="https://ahaalo.com">
                 Hotel Website Design
               </a>
             </li>
@@ -224,7 +224,7 @@ function Footer() {
               </span>
 
               <span>
-               Hollister Inn, 152 San Felipe Rd, Hollister, CA 95023, United States
+               152 San Felipe Rd, Hollister, CA 95023, United States
               </span>
             </li>
 
