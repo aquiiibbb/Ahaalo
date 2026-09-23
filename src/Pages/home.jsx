@@ -84,25 +84,7 @@ function Home() {
 
   return (
     <div className="hl-home-wrapper">
-      {/* FLOATING ACTION PILLS */}
-      <div className="hl-floating-bar">
-        <a
-          href="https://wa.me/917225962759"
-          target="_blank"
-          rel="noreferrer"
-          className="hl-fab-item hl-fab-whatsapp"
-          aria-label="Chat on WhatsApp"
-        >
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
-          </svg>
-        </a>
-        <a href="tel:+917225962759" className="hl-fab-item hl-fab-phone" aria-label="Call Sales">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
-            <path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.4-1.1-.6-2.3-.6-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z" />
-          </svg>
-        </a>
-      </div>
+   
 
       {/* 1. HERO SECTION */}
       <section className="hl-hero-section">
