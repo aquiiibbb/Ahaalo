@@ -155,7 +155,7 @@ function Footer() {
 
 
             <li>
-              <a href="https://ahaalopms.com/">
+              <a href="https://pms.ahaalo.com">
                 Hotel Website Design
               </a>
             </li>
@@ -178,7 +178,7 @@ function Footer() {
 
 
             <li>
-              <a href="https://ahaalopms-com.vercel.app/">
+              <a href="https://pms.ahaalo.com">
                 Free Trial
               </a>
             </li>
@@ -196,7 +196,7 @@ function Footer() {
             </li>
 
             <li>
-              <a href="https://ahaalopms-com.vercel.app/">
+              <a href="https://pms.ahaalo.com">
                 Client Login
               </a>
             </li>
