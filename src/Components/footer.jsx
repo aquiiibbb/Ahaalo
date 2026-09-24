@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./footer.css";
 import logo from "../assets/logo-footer.png";
 
@@ -98,13 +99,13 @@ function Footer() {
         <div className="footer-main">
           {/* BRAND COLUMN */}
           <div className="footer-col brand-col">
-            <a href="/" className="footer-logo-link">
+            <Link to="/" className="footer-logo-link">
               <img
                 src={logo}
                 alt="Hāālo AI Hotel PMS"
                 className="footer-logo"
               />
-            </a>
+            </Link>
 
             <p className="brand-description">
               Empowering hoteliers with modern management software, direct
@@ -205,15 +206,18 @@ function Footer() {
             </ul>
           </div>
 
-          {/* QUICK LINKS */}
+          {/* QUICK LINKS WITH SERVICES LINK ADDED */}
           <div className="footer-col">
             <h4 className="footer-heading">Quick Links</h4>
             <ul className="footer-links">
               <li>
-                <a href="/support">Help &amp; Support</a>
+                <Link to="/services">All Services</Link>
               </li>
               <li>
-                <a href="/contact">Contact Us</a>
+                <Link to="/support">Help &amp; Support</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact Us</Link>
               </li>
               <li>
                 <a href="https://pms.ahaalo.com" target="_blank" rel="noreferrer">
