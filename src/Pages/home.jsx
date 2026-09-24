@@ -1,9 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
 
 function Home() {
   const [activeTab, setActiveTab] = useState("pms");
   const [openFaq, setOpenFaq] = useState(null);
+
+  // Thoda aur upar se kholne ke liye offset adjustment
+  const scrollToDock = () => {
+    setTimeout(() => {
+      const dockEl = document.getElementById("product-dock-section");
+      if (dockEl) {
+        // Is value ko 180-220px ke beech rakha hai taaki card thoda aur neeche/upar se comfortably dikhe
+        const topOffset = 190; 
+        const elementPosition = dockEl.getBoundingClientRect().top;
+        const targetPosition = elementPosition + window.pageYOffset - topOffset;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
+      }
+    }, 100);
+  };
+
+  useEffect(() => {
+    const handleSwitchTab = (e) => {
+      const targetTab = e.detail;
+      if (targetTab) {
+        setActiveTab(targetTab);
+        scrollToDock();
+      }
+    };
+
+    window.addEventListener("haalo_switch_product_tab", handleSwitchTab);
+
+    // Initial check agar URL hash ke saath open hua ho
+    const hash = window.location.hash.replace("#", "");
+    if (["pms", "channel", "engine", "website"].includes(hash)) {
+      setActiveTab(hash);
+      scrollToDock();
+    }
+
+    return () => {
+      window.removeEventListener("haalo_switch_product_tab", handleSwitchTab);
+    };
+  }, []);
 
   const productTabs = [
     {
@@ -21,7 +62,7 @@ function Home() {
     {
       id: "channel",
       title: "Channel Manager",
-      tagline: "Instant 2-Way OTA Synchronization",
+      tagline: "INSTANT 2-WAY OTA SYNCHRONIZATION",
       desc: "Synchronize inventory and tariffs across Booking.com, MakeMyTrip, Agoda, and Expedia with zero double bookings.",
       image: "https://hostsync.in/images/screenshots/calendar.png",
       bullets: [
@@ -33,7 +74,7 @@ function Home() {
     {
       id: "engine",
       title: "Direct Booking Engine",
-      tagline: "0% Commission Direct Guest Conversions",
+      tagline: "0% COMMISSION DIRECT GUEST CONVERSIONS",
       desc: "Transform website visitors into paid direct reservations with integrated UPI, credit cards, and instant WhatsApp vouchers.",
       image: "https://hostsync.in/images/screenshots/financials.png",
       bullets: [
@@ -84,8 +125,6 @@ function Home() {
 
   return (
     <div className="hl-home-wrapper">
-   
-
       {/* 1. HERO SECTION */}
       <section className="hl-hero-section">
         <div className="hl-hero-container hl-slide-in">
@@ -111,7 +150,7 @@ function Home() {
           </div>
 
           {/* INTERACTIVE PRODUCT DOCK */}
-          <div className="hl-product-dock hl-slide-in-delay-1">
+          <div id="product-dock-section" className="hl-product-dock hl-slide-in-delay-1">
             <div className="hl-dock-tabs">
               {productTabs.map((tab) => (
                 <button
@@ -142,15 +181,12 @@ function Home() {
                     </a>
                   </div>
 
-                  {/* MEDIA BOX WITH EXACT CENTERED LOCK & COMING SOON CARD */}
                   <div className="hl-dock-media">
                     <div className="hl-browser-frame">
-                      {/* BROWSER TOP DOTS */}
                       <div className="hl-browser-dots">
                         <span></span><span></span><span></span>
                       </div>
 
-                      {/* BLURRED IMAGE CONTAINER */}
                       <div className="hl-dock-image-container">
                         <div
                           className="hl-dock-blurred-bg"
@@ -159,10 +195,8 @@ function Home() {
                           }}
                         ></div>
 
-                        {/* DARK TRANSPARENT SCRIM */}
                         <div className="hl-dock-dark-scrim"></div>
 
-                        {/* EXACT COMING SOON CARD */}
                         <div className="hl-dock-coming-soon-card">
                           <div className="hl-lock-icon">🔒</div>
                           <span className="hl-lock-title">COMING SOON</span>
