@@ -233,7 +233,7 @@ function Footer() {
             <ul className="contact-info">
               <li>
                 <span className="info-icon">📍</span>
-                <span>152 San Felipe Rd, Hollister, CA 95023, United States</span>
+                <span>152 San Felipe Rd, CA 95023, United States</span>
               </li>
               <li>
                 <span className="info-icon">📞</span>
