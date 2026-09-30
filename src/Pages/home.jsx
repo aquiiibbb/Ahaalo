@@ -14,7 +14,7 @@ function Home() {
     setTimeout(() => {
       const dockEl = document.getElementById("product-dock-section");
       if (dockEl) {
-        const topOffset = 190;
+        const topOffset = 100;
         const elementPosition = dockEl.getBoundingClientRect().top;
         const targetPosition = elementPosition + window.pageYOffset - topOffset;
         window.scrollTo({ top: targetPosition, behavior: "smooth" });
@@ -124,7 +124,7 @@ function Home() {
 
   return (
     <div className="hl-home-wrapper">
-      {/* 1. HERO SECTION (VIDEO BACKGROUND) */}
+      {/* 1. HERO SECTION (EXPANDED VIDEO HEIGHT) */}
       <section className="hl-hero-section">
         <video
           className="hl-hero-video"
@@ -159,9 +159,13 @@ function Home() {
             <span className="hl-divider">|</span>
             <span>✓ 24-Hr Migration Support</span>
           </div>
+        </div>
+      </section>
 
-          {/* INTERACTIVE PRODUCT DOCK */}
-          <div id="product-dock-section" className="hl-product-dock hl-slide-in-delay-1">
+      {/* 2. PRODUCT DOCK SECTION (CLEAN & SEPARATE) */}
+      <section id="product-dock-section" className="hl-dock-standalone-section hl-slide-in-delay-1">
+        <div className="hl-dock-wrapper">
+          <div className="hl-product-dock">
             <div className="hl-dock-tabs">
               {productTabs.map((tab) => (
                 <button
@@ -218,7 +222,7 @@ function Home() {
         </div>
       </section>
 
-      {/* 2. OTA & GATEWAY INTEGRATIONS */}
+      {/* 3. OTA & GATEWAY INTEGRATIONS */}
       <section className="hl-partners-strip hl-slide-in-delay-2">
         <div className="hl-partners-inner">
           <p className="hl-partners-label">SEAMLESS 2-WAY SYNCHRONIZATION WITH LEADING OTAS &amp; PAYMENT ENGINES</p>
@@ -233,7 +237,7 @@ function Home() {
         </div>
       </section>
 
-      {/* 3. PROBLEM VS SOLUTION */}
+      {/* 4. PROBLEM VS SOLUTION */}
       <section className="hl-comparison-section hl-slide-in-delay-2">
         <div className="hl-section-wrap">
           <div className="hl-heading-center">
@@ -257,7 +261,7 @@ function Home() {
         </div>
       </section>
 
-      {/* 4. STATS BANNER */}
+      {/* 5. STATS BANNER */}
       <section className="hl-metrics-banner hl-slide-in-delay-3">
         <div className="hl-metrics-grid">
           {stats.map((s, idx) => (
@@ -269,7 +273,7 @@ function Home() {
         </div>
       </section>
 
-      {/* 5. ONBOARDING STEPS */}
+      {/* 6. ONBOARDING STEPS */}
       <section className="hl-steps-section">
         <div className="hl-section-wrap">
           <div className="hl-heading-center">
@@ -298,7 +302,7 @@ function Home() {
         </div>
       </section>
 
-      {/* 6. FAQ ACCORDION */}
+      {/* 7. FAQ ACCORDION */}
       <section className="hl-faq-section">
         <div className="hl-section-wrap">
           <div className="hl-heading-center">
@@ -325,7 +329,7 @@ function Home() {
         </div>
       </section>
 
-      {/* 7. BOTTOM CONVERSION BANNER */}
+      {/* 8. BOTTOM CONVERSION BANNER */}
       <section className="hl-final-cta-section">
         <div className="hl-section-wrap">
           <div className="hl-final-box">
