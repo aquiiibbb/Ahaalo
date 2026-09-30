@@ -239,7 +239,7 @@ function Footer() {
               </li>
               <li>
                 <span className="info-icon">✉️</span>
-                <a href="mailto:admin@ahaalo.com">admin@ahaalo.com</a>
+                <a href="mailto:hello@ahaalo.com">hello@ahaalo.com</a>
               </li>
             </ul>
           </div>

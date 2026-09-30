@@ -15,8 +15,8 @@ function Support() {
       icon: "✉️",
       title: "Email Support",
       desc: "Get detailed responses within 24 hours",
-      contact: "admin@ahaalo.com",
-      link: "mailto:admin@ahaalo.com",
+      contact: "hello@ahaalo.com",
+      link: "mailto:hello@ahaalo.com",
       hours: "24/7",
     },
     {
@@ -199,7 +199,7 @@ function Support() {
           <div className="faq-grid">
             <div className="faq-item">
               <h4>How do I report a technical issue?</h4>
-              <p>Email us at info@ahaalo.in or call our support team. We typically respond within 2-4 hours for urgent issues.</p>
+              <p>Email us at hello@ahaalo.com or call our support team. We typically respond within 2-4 hours for urgent issues.</p>
             </div>
             <div className="faq-item">
               <h4>Is training provided for my staff?</h4>
