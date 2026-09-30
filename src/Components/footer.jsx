@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./footer.css";
 import logo from "../assets/logo-footer.png";
-
 function Footer() {
   const [activeModal, setActiveModal] = useState(null);
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
