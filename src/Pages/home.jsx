@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./home.css";
-
 function Home() {
   const [activeTab, setActiveTab] = useState("pms");
   const [openFaq, setOpenFaq] = useState(null);
-
   // Thoda aur upar se kholne ke liye offset adjustment
   const scrollToDock = () => {
     setTimeout(() => {
