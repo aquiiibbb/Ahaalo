@@ -28,10 +28,8 @@
 .footer-logo-link {
   display: inline-flex;
   background-color: #192230;
-  padding: 14px 20px;
   border-radius: 12px;
   margin-bottom: 18px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
 }
