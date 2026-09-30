@@ -15,8 +15,8 @@ function Support() {
       icon: "✉️",
       title: "Email Support",
       desc: "Get detailed responses within 24 hours",
-      contact: "hello@ahaalo.com",
-      link: "mailto:hello@ahaalo.com",
+      contact: "support@ahaalo.com",
+      link: "mailto:support@ahaalo.com",
       hours: "24/7",
     },
     {

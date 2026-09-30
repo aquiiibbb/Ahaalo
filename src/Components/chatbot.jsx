@@ -25,7 +25,7 @@ function Chatbot() {
       "Haalo includes: Cloud PMS, Channel Manager, Direct Booking Engine, WhatsApp Automation, AI Analytics, and Staff Mobile App. Which one interests you most?",
     ],
     support: [
-      "We offer 24/7 support via Phone (+91 92309 94738), Email (info@haalo.in), and WhatsApp. Our average response time is 30 minutes!",
+      "We offer 24/7 support via Phone (+91 92309 94738), Email (support@ahaalo.com), and WhatsApp. Our average response time is 30 minutes!",
     ],
     setup: [
       "Setup is quick! Most hotels go live within 24-48 hours. We handle zero-downtime migration from your existing system. Would you like to schedule a setup call?",

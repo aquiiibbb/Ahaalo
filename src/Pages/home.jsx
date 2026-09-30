@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
 import "./home.css";
+
+const HERO_VIDEO_URL =
+  "https://videos.pexels.com/video-files/7820469/7820469-hd_1920_1080_25fps.mp4";
+const HERO_POSTER_URL =
+  "https://images.pexels.com/videos/7820469/adolescent-adult-book-series-business-7820469.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200";
+
 function Home() {
   const [activeTab, setActiveTab] = useState("pms");
   const [openFaq, setOpenFaq] = useState(null);
-  // Thoda aur upar se kholne ke liye offset adjustment
+
   const scrollToDock = () => {
     setTimeout(() => {
       const dockEl = document.getElementById("product-dock-section");
       if (dockEl) {
-        // Is value ko 180-220px ke beech rakha hai taaki card thoda aur neeche/upar se comfortably dikhe
-        const topOffset = 190; 
+        const topOffset = 190;
         const elementPosition = dockEl.getBoundingClientRect().top;
         const targetPosition = elementPosition + window.pageYOffset - topOffset;
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth"
-        });
+        window.scrollTo({ top: targetPosition, behavior: "smooth" });
       }
     }, 100);
   };
@@ -32,7 +33,6 @@ function Home() {
 
     window.addEventListener("haalo_switch_product_tab", handleSwitchTab);
 
-    // Initial check agar URL hash ke saath open hua ho
     const hash = window.location.hash.replace("#", "");
     if (["pms", "channel", "engine", "website"].includes(hash)) {
       setActiveTab(hash);
@@ -54,8 +54,8 @@ function Home() {
       bullets: [
         "Front-desk digital check-in & automated folios",
         "Live room inventory status & housekeeping boards",
-        "Daily night audit reports & revenue leak alerts"
-      ]
+        "Daily night audit reports & revenue leak alerts",
+      ],
     },
     {
       id: "channel",
@@ -66,8 +66,8 @@ function Home() {
       bullets: [
         "100% prevention of double bookings across channels",
         "Instant 2-way pooled inventory updates",
-        "Single-click bulk rate & restriction management"
-      ]
+        "Single-click bulk rate & restriction management",
+      ],
     },
     {
       id: "engine",
@@ -78,53 +78,66 @@ function Home() {
       bullets: [
         "Zero commission on direct reservations",
         "Integrated UPI, cards, and net banking payment gateways",
-        "Automated WhatsApp confirmation with Google Maps location"
-      ]
+        "Automated WhatsApp confirmation with Google Maps location",
+      ],
     },
     {
       id: "website",
       title: "Website Development",
       tagline: "HIGH-CONVERTING HOTEL WEBSITES",
       desc: "Custom-crafted, lightning-fast hotel websites designed to elevate your brand presence and drive direct, commission-free reservations.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
       bullets: [
         "Mobile-first, conversion-optimized hotel design",
         "Integrated direct booking engine & secure checkout",
-        "Local SEO-optimized to outrank OTAs on Google"
-      ]
-    }
+        "Local SEO-optimized to outrank OTAs on Google",
+      ],
+    },
   ];
 
   const faqs = [
     {
       q: "How long does it take to switch from our existing PMS to Haalo?",
-      a: "Our onboarding team migrates all room categories, rate cards, and existing bookings within 24 to 48 hours without any downtime."
+      a: "Our onboarding team migrates all room categories, rate cards, and existing bookings within 24 to 48 hours without any downtime.",
     },
     {
       q: "Do you take any commission on direct website bookings?",
-      a: "No. Unlike third-party aggregators, Haalo charges zero commission on bookings made through your direct booking engine."
+      a: "No. Unlike third-party aggregators, Haalo charges zero commission on bookings made through your direct booking engine.",
     },
     {
       q: "Is training provided for our front desk and accounts staff?",
-      a: "Yes. Every setup includes personalized live video training, role-based workflows, and 24/7 support via WhatsApp and phone."
+      a: "Yes. Every setup includes personalized live video training, role-based workflows, and 24/7 support via WhatsApp and phone.",
     },
     {
       q: "Can we manage multiple properties from one single master dashboard?",
-      a: "Yes. Our multi-property module allows hotel owners to monitor occupancy, billing, and staff performance across multiple properties from one login."
-    }
+      a: "Yes. Our multi-property module allows hotel owners to monitor occupancy, billing, and staff performance across multiple properties from one login.",
+    },
   ];
 
   const stats = [
     { num: "99.98%", label: "Platform Uptime SLA" },
     { num: "35%+", label: "Average Direct Booking Lift" },
     { num: "<1 Sec", label: "OTA Inventory Sync Speed" },
-    { num: "100%", label: "Cloud & GST Compliant" }
+    { num: "100%", label: "Cloud & GST Compliant" },
   ];
 
   return (
     <div className="hl-home-wrapper">
-      {/* 1. HERO SECTION */}
+      {/* 1. HERO SECTION (VIDEO BACKGROUND) */}
       <section className="hl-hero-section">
+        <video
+          className="hl-hero-video"
+          src={HERO_VIDEO_URL}
+          poster={HERO_POSTER_URL}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        />
+        <div className="hl-hero-overlay"></div>
+
         <div className="hl-hero-container hl-slide-in">
           <span className="hl-pill-badge">ALL-IN-ONE HOSPITALITY TECHNOLOGY</span>
           <h1 className="hl-hero-heading">
@@ -188,13 +201,9 @@ function Home() {
                       <div className="hl-dock-image-container">
                         <div
                           className="hl-dock-blurred-bg"
-                          style={{
-                            backgroundImage: `url(${tab.image})`,
-                          }}
+                          style={{ backgroundImage: `url(${tab.image})` }}
                         ></div>
-
                         <div className="hl-dock-dark-scrim"></div>
-
                         <div className="hl-dock-coming-soon-card">
                           <div className="hl-lock-icon">🔒</div>
                           <span className="hl-lock-title">COMING SOON</span>
@@ -275,12 +284,12 @@ function Home() {
               <h4>Inventory &amp; Rate Mapping</h4>
               <p>Our specialists import your room categories, rate tiers, and existing bookings directly into your cloud PMS.</p>
             </div>
-            <div className="step-item hl-step-item">
+            <div className="hl-step-item">
               <div className="hl-step-num">02</div>
               <h4>Channel Manager &amp; Gateways</h4>
               <p>We connect your Booking.com, MMT, and payment gateways with instant real-time sync and OTP security.</p>
             </div>
-            <div className="step-item hl-step-item">
+            <div className="hl-step-item">
               <div className="hl-step-num">03</div>
               <h4>Staff Training &amp; Live Launch</h4>
               <p>Your team receives a tailored 45-minute live walkthrough, and operations switch over with 24/7 dedicated assistance.</p>

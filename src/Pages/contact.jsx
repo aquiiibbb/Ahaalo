@@ -37,8 +37,8 @@ function Contact() {
       icon: "✉️",
       title: "Email Support",
       desc: "Reach out for technical setup or documentation inquiries.",
-      contact: "hello@ahaalo.com",
-      link: "mailto:hello@ahaalo.com",
+      contact: "support@ahaalo.com",
+      link: "mailto:support@ahaalo.com",
       badge: "24-48 Hr SLA",
     },
     {
