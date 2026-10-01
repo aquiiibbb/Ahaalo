@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./home.css";
 import video from "../assets/hero-video.mp4";
+import img from "../assets/A.png";
 
 // Direct local file from public folder (Zero CORS, Zero Block)
 const HERO_VIDEO_URL = video;
@@ -247,7 +248,7 @@ function Home() {
             <div className="hl-orbit-hub">
               <div className="hl-hub-avatar">
                 <span className="hl-hub-dot"></span>
-                <span className="hl-hub-icon">🏨</span>
+                <span className="hl-hub-icon"><img src={img} alt="PMS Hub" /></span>
               </div>
             </div>
 

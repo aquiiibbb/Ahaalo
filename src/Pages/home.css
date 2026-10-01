@@ -487,50 +487,66 @@ body {
   width: 190px;
   height: 190px;
   border-color: #94a3b8;
-  background: radial-gradient(circle, rgba(241, 245, 249, 0.8) 0%, rgba(248, 250, 252, 0.15) 75%);
+  background: radial-gradient(circle, rgba(241, 245, 249, 0.85) 0%, rgba(248, 250, 252, 0.2) 75%);
 }
 
-/* Central Hub (Fixed Center) */
+/* Central Hub (Fixed Center for A Logo) */
 .hl-orbit-hub {
   position: absolute;
   z-index: 10;
-  width: 90px;
-  height: 90px;
+  width: 95px;
+  height: 95px;
   border-radius: 50%;
   background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14), 0 0 0 10px #f1f5f9;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12), 0 0 0 10px #f1f5f9;
 }
 
 .hl-hub-avatar {
-  width: 60px;
-  height: 60px;
+  width: 66px;
+  height: 66px;
   border-radius: 50%;
-  background: #1c2430;
+  background: #eaedf1;
+  border: 1.5px solid #e2e8f0;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: visible;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .hl-hub-icon {
-  font-size: 26px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.hl-hub-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .hl-hub-dot {
   position: absolute;
-  top: 4px;
-  right: 4px;
-  width: 10px;
-  height: 10px;
-  background-color: #f59e0b;
+  top: 1px;
+  right: 1px;
+  width: 12px;
+  height: 12px;
+  background-color: #10b981;
   border-radius: 50%;
   border: 2px solid #ffffff;
+  z-index: 3;
 }
 
-/* ROTATOR CONTAINER: 330px diameter corresponds to ring-middle */
+/* ROTATOR CONTAINER: Diameter matches ring-middle (330px) */
 .hl-orbit-rotator {
   position: absolute;
   width: 330px;
@@ -547,7 +563,7 @@ body {
   animation-play-state: paused;
 }
 
-/* 4 CARD POSITIONS ALONG THE CIRCLE */
+/* 4 CARD POSITIONS */
 .hl-orbit-slot {
   position: absolute;
 }
@@ -576,7 +592,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* COUNTER ROTATION: Keeps card text upright while revolving */
+/* COUNTER ROTATION: Card seedha rehta hai ghumte waqt */
 .hl-orbit-card {
   position: relative;
   background: #ffffff;
@@ -589,7 +605,7 @@ body {
   justify-content: center;
   white-space: nowrap;
   animation: orbitCounterSpin 26s linear infinite;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .hl-orbit-rotator:hover .hl-orbit-card {
@@ -602,7 +618,7 @@ body {
   border-color: #1c2430;
 }
 
-/* BADGE / STATUS INDICATOR */
+/* SYNC BADGE */
 .hl-status-badge {
   position: absolute;
   top: -7px;
@@ -624,7 +640,7 @@ body {
   box-shadow: 0 2px 6px rgba(16, 185, 129, 0.4);
 }
 
-/* CLEAR BRAND LOGO STYLES */
+/* BRAND LOGO STYLES */
 .brand-logo-small {
   font-size: 17px;
   font-weight: 800;
@@ -666,7 +682,7 @@ body {
   letter-spacing: -0.6px;
 }
 
-/* KEYFRAME ANIMATIONS FOR SMOOTH ORBIT */
+/* ROTATION KEYFRAMES */
 @keyframes orbitSpin {
   0% {
     transform: rotate(0deg);
@@ -1136,6 +1152,16 @@ body {
   .ring-inner {
     width: 130px;
     height: 130px;
+  }
+
+  .hl-orbit-hub {
+    width: 75px;
+    height: 75px;
+  }
+
+  .hl-hub-avatar {
+    width: 54px;
+    height: 54px;
   }
 
   .hl-orbit-rotator {
