@@ -1,7 +1,53 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./services.css";
 
 function Services() {
+  const gridRef = useRef(null);
+
+  // Mobile only: auto-scroll the service cards, loop back to first card at the end
+  useEffect(() => {
+    const el = gridRef.current;
+    if (!el) return;
+
+    let paused = false;
+    let resumeTimer;
+
+    const tick = () => {
+      if (paused || window.innerWidth > 640) return;
+      const card = el.querySelector(".service-card-full");
+      if (!card) return;
+      const gap = parseFloat(getComputedStyle(el).columnGap) || 14;
+      const step = card.offsetWidth + gap;
+      const max = el.scrollWidth - el.clientWidth;
+      if (el.scrollLeft >= max - 5) {
+        el.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        el.scrollTo({ left: Math.min(el.scrollLeft + step, max), behavior: "smooth" });
+      }
+    };
+
+    const pause = () => {
+      paused = true;
+      clearTimeout(resumeTimer);
+    };
+    const resume = () => {
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(() => {
+        paused = false;
+      }, 4000);
+    };
+
+    const id = setInterval(tick, 3000);
+    el.addEventListener("touchstart", pause, { passive: true });
+    el.addEventListener("touchend", resume, { passive: true });
+
+    return () => {
+      clearInterval(id);
+      clearTimeout(resumeTimer);
+      el.removeEventListener("touchstart", pause);
+      el.removeEventListener("touchend", resume);
+    };
+  }, []);
   const services = [
     {
       icon: "📊",
@@ -37,6 +83,18 @@ function Services() {
         "Pooled Inventory Control",
         "Bulk Rate Management",
         "Real-Time Cancellations",
+      ],
+    },
+    {
+      icon: "💻",
+      title: "Website Development",
+      desc: "Custom, fast and SEO-friendly websites for your hotel that showcase your property and turn visitors into direct bookings.",
+      features: [
+        "Custom Hotel Website Design",
+        "SEO Optimized",
+        "Fast & Mobile Responsive",
+        "Booking Engine Ready",
+        "Maintenance & Support",
       ],
     },
   ];
@@ -116,7 +174,7 @@ function Services() {
             <p>From property management to multi-channel distribution, we've got you covered</p>
           </div>
 
-          <div className="services-grid">
+          <div className="services-grid" ref={gridRef}>
             {services.map((service, idx) => (
               <div key={idx} className="service-card-full">
                 <div className="service-icon">{service.icon}</div>

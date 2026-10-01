@@ -1,14 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./home.css";
+import video from "../assets/hero-video.mp4";
 
-const HERO_VIDEO_URL =
-  "https://videos.pexels.com/video-files/7820469/7820469-hd_1920_1080_25fps.mp4";
-const HERO_POSTER_URL =
-  "https://images.pexels.com/videos/7820469/adolescent-adult-book-series-business-7820469.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200";
+// Direct local file from public folder (Zero CORS, Zero Block)
+const HERO_VIDEO_URL = video;
 
 function Home() {
   const [activeTab, setActiveTab] = useState("pms");
   const [openFaq, setOpenFaq] = useState(null);
+  const videoRef = useRef(null);
+
+  // Force Autoplay on Component Mount
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.log("Autoplay was prevented:", error);
+        });
+      }
+    }
+  }, []);
 
   const scrollToDock = () => {
     setTimeout(() => {
@@ -30,9 +44,7 @@ function Home() {
         scrollToDock();
       }
     };
-
     window.addEventListener("haalo_switch_product_tab", handleSwitchTab);
-
     const hash = window.location.hash.replace("#", "");
     if (["pms", "channel", "engine", "website"].includes(hash)) {
       setActiveTab(hash);
@@ -124,17 +136,16 @@ function Home() {
 
   return (
     <div className="hl-home-wrapper">
-      {/* 1. HERO SECTION (EXPANDED VIDEO HEIGHT) */}
+      {/* 1. HERO SECTION */}
       <section className="hl-hero-section">
         <video
+          ref={videoRef}
           className="hl-hero-video"
           src={HERO_VIDEO_URL}
-          poster={HERO_POSTER_URL}
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
         />
         <div className="hl-hero-overlay"></div>
 
@@ -162,7 +173,7 @@ function Home() {
         </div>
       </section>
 
-      {/* 2. PRODUCT DOCK SECTION (CLEAN & SEPARATE) */}
+      {/* 2. PRODUCT DOCK SECTION */}
       <section id="product-dock-section" className="hl-dock-standalone-section hl-slide-in-delay-1">
         <div className="hl-dock-wrapper">
           <div className="hl-product-dock">
@@ -222,18 +233,93 @@ function Home() {
         </div>
       </section>
 
-      {/* 3. OTA & GATEWAY INTEGRATIONS */}
-      <section className="hl-partners-strip hl-slide-in-delay-2">
-        <div className="hl-partners-inner">
-          <p className="hl-partners-label">SEAMLESS 2-WAY SYNCHRONIZATION WITH LEADING OTAS &amp; PAYMENT ENGINES</p>
-          <div className="hl-partners-logos">
-            <span className="brand-logo brand-booking">Booking.com</span>
-            <span className="brand-logo brand-agoda">
-              <span className="agoda-a">a</span><span className="agoda-g">g</span><span className="agoda-o">o</span><span className="agoda-d">d</span><span className="agoda-last">a</span>
-            </span>
-            <span className="brand-logo brand-expedia">Expedia</span>
-            <span className="brand-logo brand-airbnb">airbnb</span>
+      {/* 3. REAL-TIME OTA SYNCHRONIZATION SHOWCASE (ORBIT AUTO-ROTATE) */}
+      <section className="hl-orbit-showcase-section hl-slide-in-delay-2">
+        <div className="hl-section-wrap hl-orbit-grid">
+          
+          {/* Visual Radar Container */}
+          <div className="hl-orbit-visual-wrap">
+            <div className="hl-orbit-ring ring-outer"></div>
+            <div className="hl-orbit-ring ring-middle"></div>
+            <div className="hl-orbit-ring ring-inner"></div>
+
+            {/* Central PMS Hub (Fixed center) */}
+            <div className="hl-orbit-hub">
+              <div className="hl-hub-avatar">
+                <span className="hl-hub-dot"></span>
+                <span className="hl-hub-icon">🏨</span>
+              </div>
+            </div>
+
+            {/* Rotating Orbit Container */}
+            <div className="hl-orbit-rotator">
+              {/* Top: Airbnb */}
+              <div className="hl-orbit-slot slot-top">
+                <div className="hl-orbit-card">
+                  <span className="brand-logo-small brand-airbnb">airbnb</span>
+                  <span className="hl-status-badge badge-synced">✓</span>
+                </div>
+              </div>
+
+              {/* Right: Expedia */}
+              <div className="hl-orbit-slot slot-right">
+                <div className="hl-orbit-card">
+                  <span className="brand-logo-small brand-expedia">Expedia</span>
+                  <span className="hl-status-badge badge-synced">✓</span>
+                </div>
+              </div>
+
+              {/* Bottom: Booking.com */}
+              <div className="hl-orbit-slot slot-bottom">
+                <div className="hl-orbit-card">
+                  <span className="brand-logo-small brand-booking">Booking.com</span>
+                  <span className="hl-status-badge badge-synced">✓</span>
+                </div>
+              </div>
+
+              {/* Left: Agoda */}
+              <div className="hl-orbit-slot slot-left">
+                <div className="hl-orbit-card">
+                  <span className="brand-logo-small brand-agoda">
+                    <span className="agoda-a">a</span>
+                    <span className="agoda-g">g</span>
+                    <span className="agoda-o">o</span>
+                    <span className="agoda-d">d</span>
+                    <span className="agoda-last">a</span>
+                  </span>
+                  <span className="hl-status-badge badge-synced">✓</span>
+                </div>
+              </div>
+            </div>
           </div>
+
+          {/* Right Content */}
+          <div className="hl-orbit-content">
+            <span className="hl-hand-tag">— Real-time synchronization —</span>
+            <h2 className="hl-orbit-title">
+              No overbooking, <br />
+              <span className="hl-script-highlight">no headache</span>
+            </h2>
+            <p className="hl-orbit-desc">
+              Automate your inventory across all channels. When a room sells on Booking.com, Agoda, Expedia, or your direct booking engine, availability instantly updates across all platforms in real time.
+            </p>
+
+            <div className="hl-orbit-features">
+              <div className="hl-orbit-feat-item">
+                <span className="hl-feat-dot"></span>
+                <span>Sub-second 2-way pooled inventory updates</span>
+              </div>
+              <div className="hl-orbit-feat-item">
+                <span className="hl-feat-dot"></span>
+                <span>100% eradication of double bookings</span>
+              </div>
+              <div className="hl-orbit-feat-item">
+                <span className="hl-feat-dot"></span>
+                <span>Centralized price & restriction control</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
